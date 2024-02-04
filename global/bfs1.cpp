@@ -4,6 +4,9 @@
 
 using namespace std;
 
+/* Calcular el numero de estados en cada profundidad usando BFS sin pruning */
+/* y sin superar el limite de tiempo dado */
+
 int main(int argc, char **argv) {
     time_t start, finish;
     int minutes;
