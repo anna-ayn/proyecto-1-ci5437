@@ -32,14 +32,14 @@ int main(int argc, char **argv) {
     int d;
     first_goal_state(&first_goal_state, &d);
     // numero de estados en cada profundidad
-    int64_t totalNodes = 1;
+    int64_t totalNodes = 1, temp = 0;
 
     printf("Profundidad |\tNumero de estados |\tFactor de ramificacion\n");
 
     state_t current_state, child;
     queue<state_t> bfsQueue;
     queue<state_t> children;
-    int ruleid, temp = 0;
+    int ruleid;
     ruleid_iterator_t iter;
 
     // agrego el estado inicial al queue 
