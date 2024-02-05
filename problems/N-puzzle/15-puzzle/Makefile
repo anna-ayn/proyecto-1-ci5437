@@ -22,8 +22,16 @@ psvn2c_abstraction.c:
 	$(CXX) $(OPT) ../../../global/bfs1.cpp -include $< -o $@
 	rm -f $*.c
 
+%.bfs2: %.c ../../../global/bfs2.cpp
+	$(CXX) $(OPT) ../../../global/bfs2.cpp -include $< -o $@
+	rm -f $*.c
+
 %.iddfs1: %.c ../../../global/iddfs1.cpp
 	$(CXX) $(OPT) ../../../global/iddfs1.cpp -include $< -o $@
+	rm -f $*.c	
+
+%.iddfs2: %.c ../../../global/iddfs2.cpp
+	$(CXX) $(OPT) ../../../global/iddfs2.cpp -include $< -o $@
 	rm -f $*.c	
 
 %.succ: %.c ../../../global/succ.c
