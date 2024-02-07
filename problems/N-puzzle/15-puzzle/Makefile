@@ -4,8 +4,8 @@
 
 CC = gcc
 CXX = g++
-OPT = -Wall -O3 -Wno-unused-function -Wno-unused-variable
-PSVNOPT = --state_map --backward_moves --fwd_history_len=0 --bwd_history_len=0
+OPT = -Wall -Ofast -Wno-unused-function -Wno-unused-variable -march=native
+PSVNOPT = --no_state_map --no_abstraction --backwards_moves --fwd_history_len=1 --bwd_history_len=1
 
 psvn2c_core.c:
 	@cp ../../../src/psvn2c_core.c ./psvn2c_core.c
@@ -22,6 +22,9 @@ psvn2c_abstraction.c:
 	@rm -f ./psvn2c_core.c ./psvn2c_state_map.c ./psvn2c_abstraction.c
 
 .PRECIOUS: %.c
+
+%.c: %.psvn
+	$(ROOTPATH)/$(PSVNEXEC) $(PSVNOPT) < $< > $@
 
 %.bfs1: %.c ../../../global/bfs1.cpp
 	$(CXX) $(OPT) ../../../global/bfs1.cpp -include $< -o $@

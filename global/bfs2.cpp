@@ -4,12 +4,13 @@
 
 using namespace std;
 
-class State {
+// Definir el estado y el historial de un nodo del grafo
+class Node {
   public:
     state_t state;
     int hist;
 
-    State(state_t state, int hist) {
+    Node(state_t state, int hist) {
         this->state = state;
         this->hist = hist;
     }
@@ -47,10 +48,9 @@ int main(int argc, char **argv) {
 
     printf("Profundidad |\tNumero de estados |\tFactor de ramificacion\n");
 
-    State current_state = State(first_goal_state, init_history);
-    State child = State(first_goal_state, init_history);
-    queue<State> bfsQueue;
-    queue<State> children;
+    Node current_state = Node(first_goal_state, init_history), child = Node(first_goal_state, init_history);
+    queue<Node> bfsQueue;
+    queue<Node> children;
     int ruleid;
     ruleid_iterator_t iter;
 
@@ -70,6 +70,7 @@ int main(int argc, char **argv) {
                 continue;
             // agregarlo al queue
             apply_bwd_rule(ruleid, &current_state.state, &child.state);
+            child.hist = next_bwd_history(current_state.hist, ruleid);
             children.push(child);
             totalNodes++;
         }
@@ -79,7 +80,7 @@ int main(int argc, char **argv) {
             // visito los hijos de los estados en la profundidad actual
             bfsQueue = children;
             // vacio el queue de hijos
-            children = queue<State>();
+            children = queue<Node>();
 
             // imprimo el # de profundidad, # de estados en esa profundidad y el factor de ramificacion
             printf("%d\t\t%"PRId64"\t\t\t%f\n", d, totalNodes, (float)totalNodes/(float)temp);
