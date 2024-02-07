@@ -23,19 +23,25 @@ psvn2c_abstraction.c:
 
 .PRECIOUS: %.c
 
+%.bfs1: %.c ../../../global/bfs1.cpp
+	$(CXX) $(OPT) ../../../global/bfs1.cpp -include $< -o $@
+	rm -f $*.c
+
+%.bfs2: %.c ../../../global/bfs2.cpp
+	$(CXX) $(OPT) ../../../global/bfs2.cpp -include $< -o $@
+	rm -f $*.c
+
+%.iddfs1: %.c ../../../global/iddfs1.cpp
+	$(CXX) $(OPT) ../../../global/iddfs1.cpp -include $< -o $@
+	rm -f $*.c	
+
+%.iddfs2: %.c ../../../global/iddfs2.cpp
+	$(CXX) $(OPT) ../../../global/iddfs2.cpp -include $< -o $@
+	rm -f $*.c	
+
 %.succ: %.c ../../../global/succ.c
 	@echo "**** Constructing $@ ..."
 	@$(CC) $(OPT) ../../../global/succ.c -include $< -o $@
-	@rm -f $*.c
-
-%.bfs1: %.c ../../../global/bfs1.c
-	@echo "**** Constructing $@ ..."
-	@$(CC) $(OPT) ../../../global/bfs1.c -include $< -o $@
-	@rm -f $*.c
-
-%.iddfs1: %.c ../../../global/iddfs1.c
-	@echo "**** Constructing $@ ..."
-	@$(CC) $(OPT) ../../../global/iddfs1.c -include $< -o $@
 	@rm -f $*.c
 
 %.dist: %.c ../../../global/dist.cpp
