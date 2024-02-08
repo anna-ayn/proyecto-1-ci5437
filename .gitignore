@@ -1,0 +1,25 @@
+# Archivos y directorios generados por compilación
+build/
+*.o
+*.bfs1
+*.bfs2
+*.iddfs1
+*.iddfs2
+*.succ
+*.abst
+
+# Ejecutables
+bin/
+
+# Dependencias generadas por el compilador
+.dep/
+
+# Archivos de respaldo y temporales
+*~
+.vscode/
+
+# Archivos de configuración de Visual Studio Code
+.vscode/
+
+# Archivos de depuración
+*.dSYM/
