@@ -1,0 +1,91 @@
+# Representacion 24-puzzle 
+
+DOMAIN tile 25  # definir el dominio tile con 25 elementos
+       b 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24   # estos son los constantes (b es el espacio blanco)
+
+25		# el estado es un vector de 25 elementos
+
+tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile tile
+
+b X - - - - - - - - - - - - - - - - - - - - - - - => X b - - - - - - - - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_0 COST 1
+b - - - - X - - - - - - - - - - - - - - - - - - - => X - - - - b - - - - - - - - - - - - - - - - - - - LABEL MOVE_DOWN_0 COST 1
+X b - - - - - - - - - - - - - - - - - - - - - - - => b X - - - - - - - - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_1 COST 1
+- b X - - - - - - - - - - - - - - - - - - - - - - => - X b - - - - - - - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_1 COST 1
+- b - - - - X - - - - - - - - - - - - - - - - - - => - X - - - - b - - - - - - - - - - - - - - - - - - LABEL MOVE_DOWN_1 COST 1
+- X b - - - - - - - - - - - - - - - - - - - - - - => - b X - - - - - - - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_2 COST 1
+- - b X - - - - - - - - - - - - - - - - - - - - - => - - X b - - - - - - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_2 COST 1
+- - b - - - - X - - - - - - - - - - - - - - - - - => - - X - - - - b - - - - - - - - - - - - - - - - - LABEL MOVE_DOWN_2 COST 1
+- - X b - - - - - - - - - - - - - - - - - - - - - => - - b X - - - - - - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_3 COST 1
+- - - b X - - - - - - - - - - - - - - - - - - - - => - - - X b - - - - - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_3 COST 1
+- - - b - - - - X - - - - - - - - - - - - - - - - => - - - X - - - - b - - - - - - - - - - - - - - - - LABEL MOVE_DOWN_3 COST 1
+- - - X b - - - - - - - - - - - - - - - - - - - - => - - - b X - - - - - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_4 COST 1
+- - - - b - - - - X - - - - - - - - - - - - - - - => - - - - X - - - - b - - - - - - - - - - - - - - - LABEL MOVE_DOWN_4 COST 1
+- - - - - b X - - - - - - - - - - - - - - - - - - => - - - - - X b - - - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_5 COST 1
+X - - - - b - - - - - - - - - - - - - - - - - - - => b - - - - X - - - - - - - - - - - - - - - - - - - LABEL MOVE_UP_5 COST 1
+- - - - - b - - - - X - - - - - - - - - - - - - - => - - - - - X - - - - b - - - - - - - - - - - - - - LABEL MOVE_DOWN_5 COST 1
+- - - - - X b - - - - - - - - - - - - - - - - - - => - - - - - b X - - - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_6 COST 1
+- - - - - - b X - - - - - - - - - - - - - - - - - => - - - - - - X b - - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_6 COST 1
+- X - - - - b - - - - - - - - - - - - - - - - - - => - b - - - - X - - - - - - - - - - - - - - - - - - LABEL MOVE_UP_6 COST 1
+- - - - - - b - - - - X - - - - - - - - - - - - - => - - - - - - X - - - - b - - - - - - - - - - - - - LABEL MOVE_DOWN_6 COST 1
+- - - - - - X b - - - - - - - - - - - - - - - - - => - - - - - - b X - - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_7 COST 1
+- - - - - - - b X - - - - - - - - - - - - - - - - => - - - - - - - X b - - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_7 COST 1
+- - X - - - - b - - - - - - - - - - - - - - - - - => - - b - - - - X - - - - - - - - - - - - - - - - - LABEL MOVE_UP_7 COST 1
+- - - - - - - b - - - - X - - - - - - - - - - - - => - - - - - - - X - - - - b - - - - - - - - - - - - LABEL MOVE_DOWN_7 COST 1
+- - - - - - - X b - - - - - - - - - - - - - - - - => - - - - - - - b X - - - - - - - - - - - - - - - - LABEL MOVE_LEFT_8 COST 1
+- - - - - - - - b X - - - - - - - - - - - - - - - => - - - - - - - - X b - - - - - - - - - - - - - - - LABEL MOVE_RIGHT_8 COST 1
+- - - X - - - - b - - - - - - - - - - - - - - - - => - - - b - - - - X - - - - - - - - - - - - - - - - LABEL MOVE_UP_8 COST 1
+- - - - - - - - b - - - - X - - - - - - - - - - - => - - - - - - - - X - - - - b - - - - - - - - - - - LABEL MOVE_DOWN_8 COST 1
+- - - - - - - - X b - - - - - - - - - - - - - - - => - - - - - - - - b X - - - - - - - - - - - - - - - LABEL MOVE_LEFT_9 COST 1
+- - - - X - - - - b - - - - - - - - - - - - - - - => - - - - b - - - - X - - - - - - - - - - - - - - - LABEL MOVE_UP_9 COST 1
+- - - - - - - - - b - - - - X - - - - - - - - - - => - - - - - - - - - X - - - - b - - - - - - - - - - LABEL MOVE_DOWN_9 COST 1
+- - - - - - - - - - b X - - - - - - - - - - - - - => - - - - - - - - - - X b - - - - - - - - - - - - - LABEL MOVE_RIGHT_10 COST 1
+- - - - - X - - - - b - - - - - - - - - - - - - - => - - - - - b - - - - X - - - - - - - - - - - - - - LABEL MOVE_UP_10 COST 1
+- - - - - - - - - - b - - - - X - - - - - - - - - => - - - - - - - - - - X - - - - b - - - - - - - - - LABEL MOVE_DOWN_10 COST 1
+- - - - - - - - - - X b - - - - - - - - - - - - - => - - - - - - - - - - b X - - - - - - - - - - - - - LABEL MOVE_LEFT_11 COST 1
+- - - - - - - - - - - b X - - - - - - - - - - - - => - - - - - - - - - - - X b - - - - - - - - - - - - LABEL MOVE_RIGHT_11 COST 1
+- - - - - - X - - - - b - - - - - - - - - - - - - => - - - - - - b - - - - X - - - - - - - - - - - - - LABEL MOVE_UP_11 COST 1
+- - - - - - - - - - - b - - - - X - - - - - - - - => - - - - - - - - - - - X - - - - b - - - - - - - - LABEL MOVE_DOWN_11 COST 1
+- - - - - - - - - - - X b - - - - - - - - - - - - => - - - - - - - - - - - b X - - - - - - - - - - - - LABEL MOVE_LEFT_12 COST 1
+- - - - - - - - - - - - b X - - - - - - - - - - - => - - - - - - - - - - - - X b - - - - - - - - - - - LABEL MOVE_RIGHT_12 COST 1
+- - - - - - - X - - - - b - - - - - - - - - - - - => - - - - - - - b - - - - X - - - - - - - - - - - - LABEL MOVE_UP_12 COST 1
+- - - - - - - - - - - - b - - - - X - - - - - - - => - - - - - - - - - - - - X - - - - b - - - - - - - LABEL MOVE_DOWN_12 COST 1
+- - - - - - - - - - - - X b - - - - - - - - - - - => - - - - - - - - - - - - b X - - - - - - - - - - - LABEL MOVE_LEFT_13 COST 1
+- - - - - - - - - - - - - b X - - - - - - - - - - => - - - - - - - - - - - - - X b - - - - - - - - - - LABEL MOVE_RIGHT_13 COST 1
+- - - - - - - - X - - - - b - - - - - - - - - - - => - - - - - - - - b - - - - X - - - - - - - - - - - LABEL MOVE_UP_13 COST 1
+- - - - - - - - - - - - - b - - - - X - - - - - - => - - - - - - - - - - - - - X - - - - b - - - - - - LABEL MOVE_DOWN_13 COST 1
+- - - - - - - - - - - - - X b - - - - - - - - - - => - - - - - - - - - - - - - b X - - - - - - - - - - LABEL MOVE_LEFT_14 COST 1
+- - - - - - - - - X - - - - b - - - - - - - - - - => - - - - - - - - - b - - - - X - - - - - - - - - - LABEL MOVE_UP_14 COST 1
+- - - - - - - - - - - - - - b - - - - X - - - - - => - - - - - - - - - - - - - - X - - - - b - - - - - LABEL MOVE_DOWN_14 COST 1
+- - - - - - - - - - - - - - - b X - - - - - - - - => - - - - - - - - - - - - - - - X b - - - - - - - - LABEL MOVE_RIGHT_15 COST 1
+- - - - - - - - - - X - - - - b - - - - - - - - - => - - - - - - - - - - b - - - - X - - - - - - - - - LABEL MOVE_UP_15 COST 1
+- - - - - - - - - - - - - - - b - - - - X - - - - => - - - - - - - - - - - - - - - X - - - - b - - - - LABEL MOVE_DOWN_15 COST 1
+- - - - - - - - - - - - - - - X b - - - - - - - - => - - - - - - - - - - - - - - - b X - - - - - - - - LABEL MOVE_LEFT_16 COST 1
+- - - - - - - - - - - - - - - - b X - - - - - - - => - - - - - - - - - - - - - - - - X b - - - - - - - LABEL MOVE_RIGHT_16 COST 1
+- - - - - - - - - - - X - - - - b - - - - - - - - => - - - - - - - - - - - b - - - - X - - - - - - - - LABEL MOVE_UP_16 COST 1
+- - - - - - - - - - - - - - - - b - - - - X - - - => - - - - - - - - - - - - - - - - X - - - - b - - - LABEL MOVE_DOWN_16 COST 1
+- - - - - - - - - - - - - - - - X b - - - - - - - => - - - - - - - - - - - - - - - - b X - - - - - - - LABEL MOVE_LEFT_17 COST 1
+- - - - - - - - - - - - - - - - - b X - - - - - - => - - - - - - - - - - - - - - - - - X b - - - - - - LABEL MOVE_RIGHT_17 COST 1
+- - - - - - - - - - - - X - - - - b - - - - - - - => - - - - - - - - - - - - b - - - - X - - - - - - - LABEL MOVE_UP_17 COST 1
+- - - - - - - - - - - - - - - - - b - - - - X - - => - - - - - - - - - - - - - - - - - X - - - - b - - LABEL MOVE_DOWN_17 COST 1
+- - - - - - - - - - - - - - - - - X b - - - - - - => - - - - - - - - - - - - - - - - - b X - - - - - - LABEL MOVE_LEFT_18 COST 1
+- - - - - - - - - - - - - - - - - - b X - - - - - => - - - - - - - - - - - - - - - - - - X b - - - - - LABEL MOVE_RIGHT_18 COST 1
+- - - - - - - - - - - - - X - - - - b - - - - - - => - - - - - - - - - - - - - b - - - - X - - - - - - LABEL MOVE_UP_18 COST 1
+- - - - - - - - - - - - - - - - - - b - - - - X - => - - - - - - - - - - - - - - - - - - X - - - - b - LABEL MOVE_DOWN_18 COST 1
+- - - - - - - - - - - - - - - - - - X b - - - - - => - - - - - - - - - - - - - - - - - - b X - - - - - LABEL MOVE_LEFT_19 COST 1
+- - - - - - - - - - - - - - X - - - - b - - - - - => - - - - - - - - - - - - - - b - - - - X - - - - - LABEL MOVE_UP_19 COST 1
+- - - - - - - - - - - - - - - - - - - b - - - - X => - - - - - - - - - - - - - - - - - - - X - - - - b LABEL MOVE_DOWN_19 COST 1
+- - - - - - - - - - - - - - - - - - - - b X - - - => - - - - - - - - - - - - - - - - - - - - X b - - - LABEL MOVE_RIGHT_20 COST 1
+- - - - - - - - - - - - - - - X - - - - b - - - - => - - - - - - - - - - - - - - - b - - - - X - - - - LABEL MOVE_UP_20 COST 1
+- - - - - - - - - - - - - - - - - - - - X b - - - => - - - - - - - - - - - - - - - - - - - - b X - - - LABEL MOVE_LEFT_21 COST 1
+- - - - - - - - - - - - - - - - - - - - - b X - - => - - - - - - - - - - - - - - - - - - - - - X b - - LABEL MOVE_RIGHT_21 COST 1
+- - - - - - - - - - - - - - - - X - - - - b - - - => - - - - - - - - - - - - - - - - b - - - - X - - - LABEL MOVE_UP_21 COST 1
+- - - - - - - - - - - - - - - - - - - - - X b - - => - - - - - - - - - - - - - - - - - - - - - b X - - LABEL MOVE_LEFT_22 COST 1
+- - - - - - - - - - - - - - - - - - - - - - b X - => - - - - - - - - - - - - - - - - - - - - - - X b - LABEL MOVE_RIGHT_22 COST 1
+- - - - - - - - - - - - - - - - - X - - - - b - - => - - - - - - - - - - - - - - - - - b - - - - X - - LABEL MOVE_UP_22 COST 1
+- - - - - - - - - - - - - - - - - - - - - - X b - => - - - - - - - - - - - - - - - - - - - - - - b X - LABEL MOVE_LEFT_23 COST 1
+- - - - - - - - - - - - - - - - - - - - - - - b X => - - - - - - - - - - - - - - - - - - - - - - - X b LABEL MOVE_RIGHT_23 COST 1
+- - - - - - - - - - - - - - - - - - X - - - - b - => - - - - - - - - - - - - - - - - - - b - - - - X - LABEL MOVE_UP_23 COST 1
+- - - - - - - - - - - - - - - - - - - - - - - X b => - - - - - - - - - - - - - - - - - - - - - - - b X LABEL MOVE_LEFT_24 COST 1
+- - - - - - - - - - - - - - - - - - - X - - - - b => - - - - - - - - - - - - - - - - - - - b - - - - X LABEL MOVE_UP_24 COST 1
+
+GOAL 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 b
