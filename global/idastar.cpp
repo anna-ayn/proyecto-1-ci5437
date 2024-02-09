@@ -74,15 +74,15 @@ pair<Node *, unsigned> f_bounded_dfs_visit(Node *n, unsigned bound, int hist, in
     Retorna:
         - El nodo objetivo
 */
-Node ida_star(state_t *initial_state, int (*h)(state_t*)) {
+Node ida_star(state_t *initial_state, int (*heuristic)(state_t*)) {
     Node root(*initial_state, nullptr, 0);
     pair<Node *, unsigned> p;
-    unsigned long int bound = h(initial_state);
+    unsigned long int bound = heuristic(initial_state);
 
     // Buscar con límites crecientes del valor f
     while (true) {
         printf("Explorando con límite de profundidad %ld\n", bound);
-        p = f_bounded_dfs_visit(&root,bound, init_history, h);
+        p = f_bounded_dfs_visit(&root,bound, init_history, heuristic);
         if (p.first != nullptr) return *p.first;
         bound = p.second;
     }
@@ -94,7 +94,7 @@ int main(int argc, char **argv) {
     state_t initial_state; 
     int n;
 
-    init_heuristic();
+    open_pdbs();
     while (true) {
         if (fgets(input, sizeof input, stdin) == nullptr) return 0;
         n = read_state(input, &initial_state);
