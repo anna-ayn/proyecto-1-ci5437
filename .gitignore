@@ -1,10 +1,9 @@
 # Archivos y directorios generados por compilación
 build/
 *.o
-*.bfs1
-*.bfs2
-*.iddfs1
-*.iddfs2
+*.bfs*
+*.iddfs*
+*.astar*
 *.succ
 *.abst
 

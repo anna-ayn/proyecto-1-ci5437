@@ -1,5 +1,4 @@
-#include "astar.hpp"
-
+#include "../src/psvn.cpp"
 #include <limits.h>
 
 #include <iostream>
@@ -10,17 +9,21 @@
 
 using namespace std;
 
+// ! Para que compile
+unsigned int heuristic(state_t *state){
+    return 0;
+}
+
 /*
 Funcion que realiza la busqueda A*.
 Recibe:
     - initial_state: el estado inicial
-    - heuristic: la heuristica a utilizar
     - num_generated_states: el numero de estados generados
     - num_expanded_states: el numero de estados expandidos
     - max_depth: la profundidad maxima
     - time_limit: el limite de tiempo
 */
-Node *astar_search(state_t *initial_state, heuristic_t heuristic, int64_t *num_generated_states, int64_t *num_expanded_states,  int64_t *max_depth, int time_limit){
+Node *astar_search(state_t *initial_state, int64_t *num_generated_states, int64_t *num_expanded_states,  int64_t *max_depth, int time_limit){
     // Inicializamos el tiempo
     time_t start, finish;
     time(&start);
@@ -42,14 +45,15 @@ Node *astar_search(state_t *initial_state, heuristic_t heuristic, int64_t *num_g
             // Actualizamos el costo
             set_distance(ns, n->g, cost_so_far);
             // Si el nodo es una meta, terminamos
-            if (isGoal(ns)) {
+            if (is_goal(ns)) {
                 printf("Solution found!\n");
                 return n;
             }
             vector<pair<state_t *, Action>> *successors_list = successors(ns);
             // Expandemos el nodo
-            num_expanded_states->fetch_add(1);
-            printf("Expanded: %d\n", num_expanded_states->load());
+            (*num_expanded_states)++;
+            
+            printf("Expanded: %ld\n", *num_expanded_states);
             // Por cada sucesor
             for (auto successor : *successors_list) {
                 // Si el costo es finito
@@ -57,11 +61,12 @@ Node *astar_search(state_t *initial_state, heuristic_t heuristic, int64_t *num_g
                     // Creamos un nodo hijo y lo agregamos a la cola de prioridad
                     Node *child = make_node(n, successor.first, successor.second);
                     // Actualizamos el costo
-                    (*max_depth) = max(max_depth->load(), child->depth);
+                    int max_d = *max_depth;
+                    (*max_depth) = max(max_d, child->depth);
                     // Agregamos el nodo a la cola de prioridad
-                    q.push(make_pair(child->g + getFwdRuleCost(successor.second) + heuristic(child->state), child));
+                    q.push(make_pair(child->g + get_fwd_rule_cost(successor.second) + heuristic(child->state), child));
                     // Actualizamos el numero de nodos generados
-                    num_generated_states->fetch_add(1);
+                    (*num_generated_states)++;
                 }
             }
         }
@@ -93,6 +98,6 @@ int main(int argc, char **argv) {
 
     printf("Profundidad |\tNumero de estados |\tFactor de ramificacion\n");
 
-    Node result = astar_search(&first_goal_state, &manhattan, &totalNodes, &temp, &temp, minutes);
+    Node* result = astar_search(&first_goal_state, &totalNodes, &temp, &temp, minutes);
     return 0;
 }
