@@ -4,6 +4,7 @@ build/
 *.bfs*
 *.iddfs*
 *.astar*
+*.idastar*
 *.succ
 *.abst
 *.idastar

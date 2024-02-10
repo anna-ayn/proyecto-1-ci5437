@@ -20,6 +20,7 @@ struct Node {
     }
 };
 
+
 // Variables globales
 unsigned long int nodes_expanded_for_initialstate;  // cantidad de nodos expandidos dado un estado inicial
 
@@ -75,16 +76,25 @@ pair<Node *, unsigned> f_bounded_dfs_visit(Node *n, unsigned bound, int hist, in
     Retorna:
         - El nodo objetivo
 */
-Node ida_star(state_t *initial_state, int (*heuristic)(state_t*)) {
+Node* ida_star(state_t *initial_state, int (*heuristic)(state_t*)) {
     Node root(*initial_state, nullptr, 0);
     pair<Node *, unsigned> p;
     unsigned long int bound = heuristic(initial_state);
 
+    auto start = chrono::high_resolution_clock::now();
     // Buscar con límites crecientes del valor f
     while (true) {
+
         printf("Explorando con límite de profundidad %ld\n", bound);
         p = f_bounded_dfs_visit(&root,bound, init_history, heuristic);
-        if (p.first != nullptr) return *p.first;
+
+        auto end =  chrono::high_resolution_clock::now();
+        chrono::duration<double> elapsed = end - start;
+        if (elapsed > chrono::seconds(900)) {
+            printf("Tiempo de ejecución excedido\n");
+            return NULL;
+        }
+        if (p.first != nullptr) return p.first;
         bound = p.second;
     }
 }
@@ -107,13 +117,14 @@ int main(int argc, char **argv) {
         // Inicializamos el tiempo inicial
         auto start = chrono::high_resolution_clock::now();
         nodes_expanded_for_initialstate = 0;
-        Node node = ida_star(&initial_state, heuristic);
+        Node *node = ida_star(&initial_state, heuristic);
         // Inicializamos el tiempo final
         auto end =  chrono::high_resolution_clock::now();
+        if (node == nullptr) continue;
         // Calculamos el tiempo transcurrido
         chrono::duration<double> elapsed = end - start;
 
-        printf("Estado objetivo encontrado con distancia %d, nodos expandidos %ld, tiempo %f segundos.\n", node.g, nodes_expanded_for_initialstate, elapsed.count());
+        printf("Estado objetivo encontrado con distancia %d, nodos expandidos %ld, tiempo %f segundos.\n", node->g, nodes_expanded_for_initialstate, elapsed.count());
     }
 
     return 0;
