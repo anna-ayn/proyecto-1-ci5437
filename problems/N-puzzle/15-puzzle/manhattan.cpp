@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Global variables to store 
+// Variables globales
 int rows[16]; 
 int columns[16];
 
