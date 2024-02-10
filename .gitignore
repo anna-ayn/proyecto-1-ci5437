@@ -11,6 +11,8 @@ build/
 *.idastarM
 *.astar
 *.astarM
+*.ucs1
+
 
 # Ejecutables
 bin/
