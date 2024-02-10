@@ -10,6 +10,10 @@
 
 using namespace std;
 
+int64_t nodes_generated_for_initialstate;  // Cantidad de nodos generados dado un estado inicial
+int64_t nodes_expanded_for_initialstate;  // Cantidad de nodos expandidos dado un estado inicial
+int64_t max_depth_for_initialstate;  // Profundidad maxima
+
 Node *make_root_node(state_t *state) {
   Node *node = new Node;
   node->state = state;
@@ -142,29 +146,32 @@ Node *astar_search(state_t *initial_state, int64_t *num_generated_states, int64_
 }
 
 int main(int argc, char **argv) {
-    int minutes;
+    char input[1024];
+    state_t initial_state; 
+    int n;
 
-    if (argc < 2){
-        printf("Por favor introduce la cantidad de minutos de la siguiente forma:\n");
-        printf("./<nombre del archivo>.bfs1 <limite de minutos>\n");
-        printf("Por ejemplo: ./15-puzzle.bfs1 15\n");
-        return 0;
+    open_pdbs();
+    while (true) {
+        if (fgets(input, sizeof input, stdin) == nullptr) return 0;
+        n = read_state(input, &initial_state);
+        if (n <= 0) {
+            printf("El estado es invalido.\n");
+            continue;
+        }
+        cout << "Estado inicial: " << input << endl;
+
+        // Inicializamos el tiempo inicial
+        auto start = chrono::high_resolution_clock::now();
+        nodes_expanded_for_initialstate = 0;
+        Node *node = astar_search(&initial_state, &nodes_generated_for_initialstate, &nodes_expanded_for_initialstate, &max_depth_for_initialstate, 15);
+        // Inicializamos el tiempo final
+        auto end =  chrono::high_resolution_clock::now();
+        if (node == nullptr) continue;
+        // Calculamos el tiempo transcurrido
+        chrono::duration<double> elapsed = end - start;
+
+        printf("Estado objetivo encontrado con distancia %d, nodos expandidos %ld, tiempo %f segundos.\n", node->g, nodes_expanded_for_initialstate, elapsed.count());
     }
-    if (atoi(argv[1])<=0){
-        printf("La cantidad de minutos debe ser mayor a 0 (cero)\n");
-        return 0;
-    }
-    minutes = atoi(argv[1]);
 
-    // generar el estado inicial
-    state_t first_goal_state;
-    int d;
-    first_goal_state(&first_goal_state, &d);
-    // numero de estados en cada profundidad
-    int64_t totalNodes = 1, temp = 0;
-
-    printf("Profundidad |\tNumero de estados |\tFactor de ramificacion\n");
-
-    Node* result = astar_search(&first_goal_state, &totalNodes, &temp, &temp, minutes);
     return 0;
 }

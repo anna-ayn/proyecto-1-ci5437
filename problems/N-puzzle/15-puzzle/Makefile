@@ -53,7 +53,8 @@ abstractor:
 	@rm -f $*.c
 
 %.idastar: %.c ../../../global/idastar.cpp 
-	$(CXX) $(OPT) ../../../global/idastar.cpp -include $< -include heuristic.cpp -o $@
+	$(CXX) $(OPT) ../../../global/idastar.cpp -include $< -include heuristic.cpp -o $@ || (rm -f *.c && false)
+	@rm -f $*.c
 
 %.astarM: %.c ../../../global/astar.cpp
 	$(CXX) $(OPT) ../../../global/astar.cpp -include $< -include manhattan.cpp -o $@
