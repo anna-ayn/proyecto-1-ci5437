@@ -36,6 +36,7 @@ Node *astar_search(state_t *initial_state, int64_t *num_generated_states, int64_
     q.push(make_pair(heuristic(initial_state), root));
     // Mientras la cola de prioridad no este vacia
     while (!q.empty() && difftime(finish, start) < time_limit){
+        time(&finish);
         // Sacamos el nodo con menor costo de la cola de prioridad
         Node *n = q.top().second;
         q.pop();

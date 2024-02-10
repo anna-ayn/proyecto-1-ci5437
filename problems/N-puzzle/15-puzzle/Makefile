@@ -53,6 +53,12 @@ abstractor:
 
 %.idastar: %.c ../../../global/idastar.cpp 
 	$(CXX) $(OPT) ../../../global/idastar.cpp -include $< -include heuristic.cpp -o $@
+
+%.astarM: %.c ../../../global/astar.cpp
+	$(CXX) $(OPT) ../../../global/astar.cpp -include $< -include manhattan.cpp -o $@
+
+%.idastarM: %.c ../../../global/idastar.cpp
+	$(CXX) $(OPT) ../../../global/idastar.cpp  -include $< -include manhattan.cpp -o $@
 	
 .PHONY: clean
 clean:
