@@ -7,22 +7,24 @@ using namespace std;
 int rows[16]; 
 int columns[16];
 
-/**
- * Opens the PDBs and stores them in the global variables
- */
-void init_heuristic() {
+
+/*
+    Funcion que abre los PDBs y los almacena en el vector
+*/
+void open_pdbs() {
     for (int i = 0; i < 16; i++) {
         rows[i] = i / 4;
         columns[i] = i % 4;
     }
 }
 
-/**
- * Computes the heuristic value of a state
- * Manhattan distance
- * @param state The state to compute the heuristic value
- * @return The heuristic value of the state
- */
+/*
+    Funcion que calcula el valor heuristico de un estado con la distancia de Manhattan
+    Recibe:
+        - state: el estado al que se le calculara el valor heuristico
+    Retorna:
+        Retorna el valor heuristico del estado
+*/
 int heuristic(state_t *state) {
     int h, size = 16;
 	var_t *vals = state->vars;
