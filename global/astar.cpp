@@ -9,11 +9,6 @@
 
 using namespace std;
 
-// ! Para que compile
-unsigned int heuristic(state_t *state){
-    return 0;
-}
-
 /*
 Funcion que realiza la busqueda A*.
 Recibe:
