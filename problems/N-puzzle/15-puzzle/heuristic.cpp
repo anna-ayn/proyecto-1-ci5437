@@ -24,7 +24,7 @@ void open_pdbs() {
 		assert(filepdb != NULL);
         // guardo el PDB y la abstraccion en los vectores, y cierro el archivo
 		pdbs.push_back(read_state_map(filepdb));
-		absts.push_back(read_abstraction_from_file((fileabsts[i]).c_str()));
+		absts.push_back(read_abstraction_from_file(fileabsts[i].c_str()));
 		fclose(filepdb);
 	}
 }
@@ -48,5 +48,7 @@ int heuristic(state_t *state) {
 		// obtener y actualizar el valor heuristico
 		h_value += *state_map_get(pdbs[i], temp_state);
 	}
+	// liberar memoria
+	delete temp_state;
 	return h_value;
 }

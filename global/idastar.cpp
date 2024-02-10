@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <utility> 
+#include <chrono>
 
 using namespace std;
 
@@ -89,7 +90,6 @@ Node ida_star(state_t *initial_state, int (*heuristic)(state_t*)) {
 }
 
 int main(int argc, char **argv) {
-    time_t start, finish;
     char input[1024];
     state_t initial_state; 
     int n;
@@ -105,15 +105,15 @@ int main(int argc, char **argv) {
         cout << "Estado inicial: " << input << endl;
 
         // Inicializamos el tiempo inicial
-        time(&start);
+        auto start = chrono::high_resolution_clock::now();
         nodes_expanded_for_initialstate = 0;
         Node node = ida_star(&initial_state, heuristic);
         // Inicializamos el tiempo final
-        time(&finish);
+        auto end =  chrono::high_resolution_clock::now();
         // Calculamos el tiempo transcurrido
-        double time_elapsed = difftime(finish, start);
+        chrono::duration<double> elapsed = end - start;
 
-        printf("Estado objetivo encontrado con distancia %d, nodos expandidos %ld, tiempo %f\n", node.g, nodes_expanded_for_initialstate, time_elapsed);
+        printf("Estado objetivo encontrado con distancia %d, nodos expandidos %ld, tiempo %f segundos.\n", node.g, nodes_expanded_for_initialstate, elapsed.count());
     }
 
     return 0;
