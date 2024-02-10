@@ -6,6 +6,10 @@ build/
 *.astar*
 *.succ
 *.abst
+*.idastar
+*.idastarM
+*.astar
+*.astarM
 
 # Ejecutables
 bin/
