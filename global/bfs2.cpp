@@ -59,6 +59,7 @@ int main(int argc, char **argv) {
 
     // mientras el queue no este vacio y el tiempo no se haya acabado
     while (!bfsQueue.empty() and difftime(finish, start)/60 < minutes) {
+        time(&finish);
         // sacamos el primer elemento del queue
         current_state = bfsQueue.front();
         bfsQueue.pop();
