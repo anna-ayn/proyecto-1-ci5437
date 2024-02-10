@@ -1,6 +1,4 @@
-#include "../src/psvn.cpp"
 #include <limits.h>
-
 #include <iostream>
 #include <queue>
 #include <unordered_map>
@@ -8,6 +6,21 @@
 #define INFINITY UINT_MAX
 
 using namespace std;
+
+struct Node {
+  public:
+    state_t state; // Estado representado por un nodo 
+
+    Node *parent; // Nodo padre
+    unsigned g; // costo del camino parcial 
+
+    // constructor
+    Node(state_t state, Node *parent, unsigned g) {
+        this->state = state;
+        this->parent = parent;
+        this->g = g;
+    }
+};
 
 /*
 Funcion que realiza la busqueda A*.
