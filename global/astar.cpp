@@ -1,4 +1,6 @@
+#include "../src/psvn.cpp"
 #include <limits.h>
+
 #include <iostream>
 #include <queue>
 #include <unordered_map>
@@ -7,20 +9,10 @@
 
 using namespace std;
 
-struct Node {
-  public:
-    state_t state; // Estado representado por un nodo 
-
-    Node *parent; // Nodo padre
-    unsigned g; // costo del camino parcial 
-
-    // constructor
-    Node(state_t state, Node *parent, unsigned g) {
-        this->state = state;
-        this->parent = parent;
-        this->g = g;
-    }
-};
+// ! Para que compile
+unsigned int heuristic(state_t *state){
+    return 0;
+}
 
 /*
 Funcion que realiza la busqueda A*.
