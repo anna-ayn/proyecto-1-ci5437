@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// HEURISTIC PARA 15-PUZZLE
+// HEURISTIC PARA HANOI 12X4
 
 // Vectores que guardan los PDBs y abstracciones
 vector<abstraction_t*> absts;
@@ -12,9 +12,9 @@ vector<state_map_t*> pdbs;
     Funcion que abre los PDBs y los almacena en el vector
 */
 void open_pdbs() {
-    // tenemos 3 PDBs
-	vector<string> filepdbs = {"hanoi_12x4_test1.pdb", "hanoi_12x4_test2.pdb", "hanoi_12x4_test3.pdb"};
-    vector<string> fileabsts = {"hanoi_12x4_test1.abst", "hanoi_12x4_test2.abst", "hanoi_12x4_test3.abst"};
+    // tenemos 2 PDBs
+	vector<string> filepdbs = {"hanoi_12x4_group_1.pdb", "hanoi_12x4_group_2.pdb"};
+    vector<string> fileabsts = {"hanoi_12x4_group_1.abst", "hanoi_12x4_group_2.abst"};
 
     // itero en cada archivo PDB
 	for (unsigned int i = 0; i < filepdbs.size(); i++) {

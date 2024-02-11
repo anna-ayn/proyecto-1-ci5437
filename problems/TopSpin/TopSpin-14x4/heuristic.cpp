@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// HEURISTIC PARA 15-PUZZLE
+// HEURISTIC PARA TOPSPIN 14X4
 
 // Vectores que guardan los PDBs y abstracciones
 vector<abstraction_t*> absts;
@@ -12,7 +12,7 @@ vector<state_map_t*> pdbs;
     Funcion que abre los PDBs y los almacena en el vector
 */
 void open_pdbs() {
-    // tenemos 3 PDBs
+    // tenemos 2 PDBs
 	vector<string> filepdbs = {"topspin14x4_group_1.pdb", "topspin14x4_group_2.pdb"};
     vector<string> fileabsts = {"topspin14x4_group_1.abst", "topspin14x4_group_2.abst"};
 
