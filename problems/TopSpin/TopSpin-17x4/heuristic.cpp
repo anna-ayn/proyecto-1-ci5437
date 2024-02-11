@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// HEURISTIC PARA 15-PUZZLE
+// HEURISTIC PARA TOPSPIN 17X4
 
 // Vectores que guardan los PDBs y abstracciones
 vector<abstraction_t*> absts;
