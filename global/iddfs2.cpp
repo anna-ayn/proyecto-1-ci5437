@@ -72,7 +72,6 @@ int main(int argc, char **argv) {
     int64_t temp = 0;
     // mientras el tiempo no se haya acabado
     while(difftime(finish, start)/60 < minutes) {
-        time(&finish);
         int hist = init_history;
         // visitar el estado inicial y sus hijos hasta la profundidad dada
         dls(&first_goal_state, 0, bound, &totalNodes, hist);
@@ -84,6 +83,7 @@ int main(int argc, char **argv) {
         bound++;
         temp = totalNodes;
         totalNodes = 0;
+        time(&finish);
     }
 
     // imprimir el ultimo nivel y el numero total de estados encontrados 

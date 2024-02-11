@@ -59,7 +59,6 @@ int main(int argc, char **argv) {
 
     // mientras el queue no este vacio y el tiempo no se haya acabado
     while (!bfsQueue.empty() and difftime(finish, start)/60 < minutes) {
-        time(&finish);
         // sacamos el primer elemento del queue
         current_state = bfsQueue.front();
         bfsQueue.pop();
@@ -88,6 +87,7 @@ int main(int argc, char **argv) {
             temp = totalNodes;
             d++; // aumentar la profundidad a 1
         }
+        time(&finish);
     }
 
     // imprimir el ultimo nivel y el numero total de estados encontrados 
