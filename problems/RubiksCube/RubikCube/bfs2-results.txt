@@ -1,0 +1,9 @@
+./rubik3Sticker.bfs2 15
+Profundidad |   Numero de estados |     Factor de ramificacion
+0               19                      inf
+1               262                     13.789474
+2               3502                    13.366412
+3               46756                   13.351228
+4               624124                  13.348533
+5               8331112                 13.348489
+Killed
