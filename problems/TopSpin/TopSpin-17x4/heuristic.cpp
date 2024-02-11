@@ -13,8 +13,8 @@ vector<state_map_t*> pdbs;
 */
 void open_pdbs() {
     // tenemos 3 PDBs
-	vector<string> filepdbs = {"topspin17x4_test1.pdb", "topspin17x4_test2.pdb", "topspin17x4_test3.pdb"};
-    vector<string> fileabsts = {"topspin17x4_test1.abst", "topspin17x4_test2.abst", "topspin17x4_test3.abst"};
+	vector<string> filepdbs = {"topspin17x4_group_1.pdb", "topspin17x4_group_2.pdb", "topspin17x4_group_3.pdb"};
+    vector<string> fileabsts = {"topspin17x4_group_1.abst", "topspin17x4_group_2.abst", "topspin17x4_group_3.abst"};
 
     // itero en cada archivo PDB
 	for (unsigned int i = 0; i < filepdbs.size(); i++) {
