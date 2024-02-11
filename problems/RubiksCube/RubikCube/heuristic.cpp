@@ -13,8 +13,8 @@ vector<state_map_t*> pdbs;
 */
 void open_pdbs() {
     // tenemos 3 PDBs
-	vector<string> filepdbs = {"rubik3Sticker_test1.pdb", "rubik3Sticker_test2.pdb", "rubik3Sticker_test3.pdb"};
-    vector<string> fileabsts = {"rubik3Sticker_test1.abst", "rubik3Sticker_test2.abst", "rubik3Sticker_test3.abst"};
+	vector<string> filepdbs = {"rubik3Sticker_rubik_corner_1.pdb", "rubik3Sticker_rubik_corner_2.pdb", "rubik3Sticker_rubik_corner_3.pdb", "rubik3Sticker_rubik_corner_4.pdb", "rubik3Sticker_rubik_edge_1.pdb", "rubik3Sticker_rubik_edge_2.pdb", "rubik3Sticker_rubik_edge_3.pdb", "rubik3Sticker_rubik_edge_4.pdb"};
+    vector<string> fileabsts = {"rubik3Sticker_rubik_corner_1.abst", "rubik3Sticker_rubik_corner_2.abst", "rubik3Sticker_rubik_corner_3.abst", "rubik3Sticker_rubik_corner_4.abst", "rubik3Sticker_rubik_edge_1.abst", "rubik3Sticker_rubik_edge_2.abst", "rubik3Sticker_rubik_edge_3.abst", "rubik3Sticker_rubik_edge_4.abst"};
 
     // itero en cada archivo PDB
 	for (unsigned int i = 0; i < filepdbs.size(); i++) {
