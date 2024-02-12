@@ -1,0 +1,11 @@
+./topspin14x4.bfs2 15
+Profundidad |   Numero de estados |     Factor de ramificacion
+0               15                      inf
+1               148                     9.866667
+2               1296                    8.756757
+3               11007                   8.493055
+4               92871                   8.437449
+5               782671                  8.427507
+6               6594815                 8.426037
+7               55567064                        8.425872
+Killed
