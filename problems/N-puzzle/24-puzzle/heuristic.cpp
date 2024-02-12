@@ -13,8 +13,8 @@ vector<state_map_t*> pdbs;
 */
 void open_pdbs() {
     // tenemos 3 PDBs
-	vector<string> filepdbs = {"24-puzzle_test1.pdb", "24-puzzle_test2.pdb", "24-puzzle_test3.pdb", "24-puzzle_test4.pdb", "24-puzzle_test5.pdb"};
-    vector<string> fileabsts = {"24-puzzle_test1.abst", "24-puzzle_test2.abst", "24-puzzle_test3.abst", "24-puzzle_test4.abst", "24-puzzle_test5.abst"};
+	vector<string> filepdbs = {"24-puzzle_test1.pdb", "24-puzzle_test2.pdb", "24-puzzle_test3.pdb", "24-puzzle_test4.pdb", "24-puzzle_test5.pdb", "24-puzzle_test6.pdb"};
+    vector<string> fileabsts = {"24-puzzle_test1.abst", "24-puzzle_test2.abst", "24-puzzle_test3.abst", "24-puzzle_test4.abst", "24-puzzle_test5.abst", "24-puzzle_test6.abst"};
 
     // itero en cada archivo PDB
 	for (unsigned int i = 0; i < filepdbs.size(); i++) {
