@@ -1,5 +1,7 @@
 # Archivos y directorios generados por compilación
 build/
+*.dist
+*.distSummary
 *.o
 *.bfs*
 *.iddfs*
