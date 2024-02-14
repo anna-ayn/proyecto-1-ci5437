@@ -19,6 +19,14 @@ psvn2c_abstraction.c:
 
 .PRECIOUS: %.c
 
+%.ucs1: %.c ../../global/ucs1.cpp
+	$(CXX) $(OPT) ../../global/ucs1.cpp -include $< -o $@
+	rm -f $*.c
+
+%.ucs2: %.c ../../global/ucs2.cpp
+	$(CXX) $(OPT) ../../global/ucs2.cpp -include $< -o $@
+	rm -f $*.c
+
 %.bfs1: %.c ../../global/bfs1.cpp
 	$(CXX) $(OPT) ../../global/bfs1.cpp -include $< -o $@
 	rm -f $*.c
