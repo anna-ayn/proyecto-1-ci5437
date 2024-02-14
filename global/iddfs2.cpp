@@ -26,8 +26,9 @@ void dls(state_t *state, int d, int bound, int64_t *totalNodes, int hist) {
     // iterar sobre cada hijo del estado actual
     init_bwd_iter(&iter, state);
     while ((ruleid = next_ruleid(&iter)) >= 0) {
-        if (!bwd_rule_valid_for_history(hist, ruleid)) 
+        if (!bwd_rule_valid_for_history(hist, ruleid))  {
             continue;
+        }
 
         apply_bwd_rule(ruleid, state, &child);
         dls(&child, d + 1, bound, totalNodes, next_bwd_history(hist, ruleid));
@@ -44,7 +45,7 @@ int main(int argc, char **argv) {
 
     if (argc < 2){
         printf("Por favor introduce la cantidad de minutos de la siguiente forma:\n");
-        printf("./<nombre del archivo>.iddfs1 <limite de minutos>\n");
+        printf("./<nombre del archivo>.iddfs2 <limite de minutos>\n");
         printf("Por ejemplo: ./15-puzzle.iddfs2 15\n");
         return 0;
     }

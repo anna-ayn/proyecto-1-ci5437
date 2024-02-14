@@ -25,8 +25,8 @@ int main(int argc, char **argv) {
 
     if (argc < 2){
         printf("Por favor introduce la cantidad de minutos de la siguiente forma:\n");
-        printf("./<nombre del archivo>.bfs1 <limite de minutos>\n");
-        printf("Por ejemplo: ./15-puzzle.bfs1 15\n");
+        printf("./<nombre del archivo>.bfs2 <limite de minutos>\n");
+        printf("Por ejemplo: ./15-puzzle.bfs2 15\n");
         return 0;
     }
     if (atoi(argv[1])<=0){
