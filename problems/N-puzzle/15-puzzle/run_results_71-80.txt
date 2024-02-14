@@ -1,0 +1,288 @@
+make[1]: Entering directory '/home/simonp/chanchanchan/problems/N-puzzle/15-puzzle'
+make[1]: Leaving directory '/home/simonp/chanchanchan/problems/N-puzzle/15-puzzle'
+1 states at distance 0
+8 states at distance 1
+41 states at distance 2
+158 states at distance 3
+548 states at distance 4
+1638 states at distance 5
+4248 states at distance 6
+9620 states at distance 7
+19174 states at distance 8
+33596 states at distance 9
+51330 states at distance 10
+68470 states at distance 11
+79417 states at distance 12
+79656 states at distance 13
+68558 states at distance 14
+50242 states at distance 15
+31262 states at distance 16
+16204 states at distance 17
+6906 states at distance 18
+2372 states at distance 19
+589 states at distance 20
+116 states at distance 21
+6 states at distance 22
+524160 states in total.
+make[1]: Entering directory '/home/simonp/chanchanchan/problems/N-puzzle/15-puzzle'
+make[1]: Leaving directory '/home/simonp/chanchanchan/problems/N-puzzle/15-puzzle'
+1 states at distance 0
+6 states at distance 1
+32 states at distance 2
+122 states at distance 3
+419 states at distance 4
+1257 states at distance 5
+3406 states at distance 6
+7922 states at distance 7
+16210 states at distance 8
+29218 states at distance 9
+46657 states at distance 10
+65424 states at distance 11
+79536 states at distance 12
+83081 states at distance 13
+73346 states at distance 14
+54437 states at distance 15
+33952 states at distance 16
+17710 states at distance 17
+7723 states at distance 18
+2719 states at distance 19
+766 states at distance 20
+180 states at distance 21
+32 states at distance 22
+4 states at distance 23
+524160 states in total.
+make[1]: Entering directory '/home/simonp/chanchanchan/problems/N-puzzle/15-puzzle'
+make[1]: Leaving directory '/home/simonp/chanchanchan/problems/N-puzzle/15-puzzle'
+1 states at distance 0
+6 states at distance 1
+26 states at distance 2
+103 states at distance 3
+349 states at distance 4
+1018 states at distance 5
+2578 states at distance 6
+5824 states at distance 7
+11720 states at distance 8
+20937 states at distance 9
+33391 states at distance 10
+47918 states at distance 11
+62134 states at distance 12
+72491 states at distance 13
+75033 states at distance 14
+67753 states at distance 15
+52744 states at distance 16
+35144 states at distance 17
+19932 states at distance 18
+9586 states at distance 19
+3884 states at distance 20
+1260 states at distance 21
+288 states at distance 22
+40 states at distance 23
+524160 states in total.
+A* 15-puzzle (Manhattan)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include 15-puzzle.c -include manhattan.cpp -o 15-puzzle.astarM
+Estado inicial: 5 7 b 11 12 1 9 10 15 6 2 3 8 4 13 14 
+
+Estado objetivo encontrado con distancia 44, nodos expandidos 124158, tiempo 0.160682 segundos.
+Estado inicial: 12 15 11 10 4 5 14 b 13 7 1 2 9 8 3 6 
+
+Estado objetivo encontrado con distancia 56, nodos expandidos 25730775, tiempo 55.284082 segundos.
+Estado inicial: 6 14 10 5 15 8 7 1 3 4 2 b 12 9 11 13 
+
+Estado objetivo encontrado con distancia 49, nodos expandidos 251998, tiempo 0.392014 segundos.
+Estado inicial: 14 13 4 11 15 8 6 9 b 7 3 1 2 10 12 5 
+
+Estado objetivo encontrado con distancia 56, nodos expandidos 406288, tiempo 1.123872 segundos.
+Estado inicial: 14 4 b 10 6 5 1 3 9 2 13 15 12 7 8 11 
+
+Estado objetivo encontrado con distancia 48, nodos expandidos 4709922, tiempo 9.049689 segundos.
+Estado inicial: 15 10 8 3 b 6 9 5 1 14 13 11 7 2 12 4 
+
+Estado objetivo encontrado con distancia 57, nodos expandidos 9039064, tiempo 20.785549 segundos.
+Estado inicial: b 13 2 4 12 14 6 9 15 1 10 3 11 5 8 7 
+
+Estado objetivo encontrado con distancia 54, nodos expandidos 2130037, tiempo 5.252941 segundos.
+Estado inicial: 3 14 13 6 4 15 8 9 5 12 10 b 2 7 1 11 
+
+Estado objetivo encontrado con distancia 53, nodos expandidos 418789, tiempo 1.184358 segundos.
+Estado inicial: b 1 9 7 11 13 5 3 14 12 4 2 8 6 10 15 
+
+Estado objetivo encontrado con distancia 42, nodos expandidos 60342, tiempo 0.105350 segundos.
+Estado inicial: 11 b 15 8 13 12 3 5 10 1 4 6 14 9 7 2 
+
+Estado objetivo encontrado con distancia 57, nodos expandidos 7998148, tiempo 18.971017 segundos.
+IDA* 15-puzzle (Manhattan)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp  -include 15-puzzle.c -include manhattan.cpp -o 15-puzzle.idastarM
+Estado inicial: 5 7 b 11 12 1 9 10 15 6 2 3 8 4 13 14 
+
+Estado objetivo encontrado con distancia 44, nodos expandidos 124158, tiempo 0.251297 segundos.
+Estado inicial: 12 15 11 10 4 5 14 b 13 7 1 2 9 8 3 6 
+
+Estado objetivo encontrado con distancia 56, nodos expandidos 25730775, tiempo 58.423371 segundos.
+Estado inicial: 6 14 10 5 15 8 7 1 3 4 2 b 12 9 11 13 
+
+Estado objetivo encontrado con distancia 49, nodos expandidos 251998, tiempo 0.279097 segundos.
+Estado inicial: 14 13 4 11 15 8 6 9 b 7 3 1 2 10 12 5 
+
+Estado objetivo encontrado con distancia 56, nodos expandidos 406288, tiempo 0.524888 segundos.
+Estado inicial: 14 4 b 10 6 5 1 3 9 2 13 15 12 7 8 11 
+
+Estado objetivo encontrado con distancia 48, nodos expandidos 4709922, tiempo 14.313988 segundos.
+Estado inicial: 15 10 8 3 b 6 9 5 1 14 13 11 7 2 12 4 
+
+Estado objetivo encontrado con distancia 57, nodos expandidos 9039064, tiempo 19.648940 segundos.
+Estado inicial: b 13 2 4 12 14 6 9 15 1 10 3 11 5 8 7 
+
+Estado objetivo encontrado con distancia 54, nodos expandidos 2130037, tiempo 4.310953 segundos.
+Estado inicial: 3 14 13 6 4 15 8 9 5 12 10 b 2 7 1 11 
+
+Estado objetivo encontrado con distancia 53, nodos expandidos 418789, tiempo 1.136101 segundos.
+Estado inicial: b 1 9 7 11 13 5 3 14 12 4 2 8 6 10 15 
+
+Estado objetivo encontrado con distancia 42, nodos expandidos 60342, tiempo 0.123428 segundos.
+Estado inicial: 11 b 15 8 13 12 3 5 10 1 4 6 14 9 7 2 
+
+Estado objetivo encontrado con distancia 57, nodos expandidos 7998148, tiempo 17.216495 segundos.
+A* 15-puzzle (PDBs aditivos)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include 15-puzzle.c -include heuristic.cpp -o 15-puzzle.astar || (rm -f *.c && false)
+Estado inicial: 5 7 b 11 12 1 9 10 15 6 2 3 8 4 13 14 
+
+Estado objetivo encontrado con distancia 44, nodos expandidos 124158, tiempo 0.185227 segundos.
+Estado inicial: 12 15 11 10 4 5 14 b 13 7 1 2 9 8 3 6 
+
+Estado objetivo encontrado con distancia 56, nodos expandidos 25730775, tiempo 60.228614 segundos.
+Estado inicial: 6 14 10 5 15 8 7 1 3 4 2 b 12 9 11 13 
+
+Estado objetivo encontrado con distancia 49, nodos expandidos 251998, tiempo 0.492971 segundos.
+Estado inicial: 14 13 4 11 15 8 6 9 b 7 3 1 2 10 12 5 
+
+Estado objetivo encontrado con distancia 56, nodos expandidos 406288, tiempo 1.083875 segundos.
+Estado inicial: 14 4 b 10 6 5 1 3 9 2 13 15 12 7 8 11 
+
+Estado objetivo encontrado con distancia 48, nodos expandidos 4709922, tiempo 8.001368 segundos.
+Estado inicial: 15 10 8 3 b 6 9 5 1 14 13 11 7 2 12 4 
+
+Estado objetivo encontrado con distancia 57, nodos expandidos 9039064, tiempo 21.078355 segundos.
+Estado inicial: b 13 2 4 12 14 6 9 15 1 10 3 11 5 8 7 
+
+Estado objetivo encontrado con distancia 54, nodos expandidos 2130037, tiempo 5.053371 segundos.
+Estado inicial: 3 14 13 6 4 15 8 9 5 12 10 b 2 7 1 11 
+
+Estado objetivo encontrado con distancia 53, nodos expandidos 418789, tiempo 1.336281 segundos.
+Estado inicial: b 1 9 7 11 13 5 3 14 12 4 2 8 6 10 15 
+
+Estado objetivo encontrado con distancia 42, nodos expandidos 60342, tiempo 0.137019 segundos.
+Estado inicial: 11 b 15 8 13 12 3 5 10 1 4 6 14 9 7 2 
+
+Estado objetivo encontrado con distancia 57, nodos expandidos 7998148, tiempo 15.481216 segundos.
+Ida* 15-puzzle (PDBs aditivos)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include 15-puzzle.c -include heuristic.cpp -o 15-puzzle.idastar || (rm -f *.c && false)
+Estado inicial: 5 7 b 11 12 1 9 10 15 6 2 3 8 4 13 14 
+
+Explorando con límite de profundidad 32
+Explorando con límite de profundidad 34
+Explorando con límite de profundidad 36
+Explorando con límite de profundidad 38
+Explorando con límite de profundidad 40
+Explorando con límite de profundidad 42
+Explorando con límite de profundidad 44
+Estado objetivo encontrado con distancia 44, nodos expandidos 478730, tiempo 0.599322 segundos.
+Estado inicial: 12 15 11 10 4 5 14 b 13 7 1 2 9 8 3 6 
+
+Explorando con límite de profundidad 40
+Explorando con límite de profundidad 42
+Explorando con límite de profundidad 44
+Explorando con límite de profundidad 46
+Explorando con límite de profundidad 48
+Explorando con límite de profundidad 50
+Explorando con límite de profundidad 52
+Explorando con límite de profundidad 54
+Explorando con límite de profundidad 56
+Estado objetivo encontrado con distancia 56, nodos expandidos 92606999, tiempo 104.837826 segundos.
+Estado inicial: 6 14 10 5 15 8 7 1 3 4 2 b 12 9 11 13 
+
+Explorando con límite de profundidad 37
+Explorando con límite de profundidad 39
+Explorando con límite de profundidad 41
+Explorando con límite de profundidad 43
+Explorando con límite de profundidad 45
+Explorando con límite de profundidad 47
+Explorando con límite de profundidad 49
+Estado objetivo encontrado con distancia 49, nodos expandidos 266587, tiempo 0.424637 segundos.
+Estado inicial: 14 13 4 11 15 8 6 9 b 7 3 1 2 10 12 5 
+
+Explorando con límite de profundidad 48
+Explorando con límite de profundidad 50
+Explorando con límite de profundidad 52
+Explorando con límite de profundidad 54
+Explorando con límite de profundidad 56
+Estado objetivo encontrado con distancia 56, nodos expandidos 542187, tiempo 0.391852 segundos.
+Estado inicial: 14 4 b 10 6 5 1 3 9 2 13 15 12 7 8 11 
+
+Explorando con límite de profundidad 30
+Explorando con límite de profundidad 32
+Explorando con límite de profundidad 34
+Explorando con límite de profundidad 36
+Explorando con límite de profundidad 38
+Explorando con límite de profundidad 40
+Explorando con límite de profundidad 42
+Explorando con límite de profundidad 44
+Explorando con límite de profundidad 46
+Explorando con límite de profundidad 48
+Estado objetivo encontrado con distancia 48, nodos expandidos 9917580, tiempo 14.029039 segundos.
+Estado inicial: 15 10 8 3 b 6 9 5 1 14 13 11 7 2 12 4 
+
+Explorando con límite de profundidad 41
+Explorando con límite de profundidad 43
+Explorando con límite de profundidad 45
+Explorando con límite de profundidad 47
+Explorando con límite de profundidad 49
+Explorando con límite de profundidad 51
+Explorando con límite de profundidad 53
+Explorando con límite de profundidad 55
+Explorando con límite de profundidad 57
+Estado objetivo encontrado con distancia 57, nodos expandidos 48086934, tiempo 62.197216 segundos.
+Estado inicial: b 13 2 4 12 14 6 9 15 1 10 3 11 5 8 7 
+
+Explorando con límite de profundidad 34
+Explorando con límite de profundidad 36
+Explorando con límite de profundidad 38
+Explorando con límite de profundidad 40
+Explorando con límite de profundidad 42
+Explorando con límite de profundidad 44
+Explorando con límite de profundidad 46
+Explorando con límite de profundidad 48
+Explorando con límite de profundidad 50
+Explorando con límite de profundidad 52
+Explorando con límite de profundidad 54
+Estado objetivo encontrado con distancia 54, nodos expandidos 3887793, tiempo 4.590087 segundos.
+Estado inicial: 3 14 13 6 4 15 8 9 5 12 10 b 2 7 1 11 
+
+Explorando con límite de profundidad 41
+Explorando con límite de profundidad 43
+Explorando con límite de profundidad 45
+Explorando con límite de profundidad 47
+Explorando con límite de profundidad 49
+Explorando con límite de profundidad 51
+Explorando con límite de profundidad 53
+Estado objetivo encontrado con distancia 53, nodos expandidos 2200902, tiempo 2.576566 segundos.
+Estado inicial: b 1 9 7 11 13 5 3 14 12 4 2 8 6 10 15 
+
+Explorando con límite de profundidad 30
+Explorando con límite de profundidad 32
+Explorando con límite de profundidad 34
+Explorando con límite de profundidad 36
+Explorando con límite de profundidad 38
+Explorando con límite de profundidad 40
+Explorando con límite de profundidad 42
+Estado objetivo encontrado con distancia 42, nodos expandidos 62254, tiempo 0.063861 segundos.
+Estado inicial: 11 b 15 8 13 12 3 5 10 1 4 6 14 9 7 2 
+
+Explorando con límite de profundidad 43
+Explorando con límite de profundidad 45
+Explorando con límite de profundidad 47
+Explorando con límite de profundidad 49
+Explorando con límite de profundidad 51
+Explorando con límite de profundidad 53
+Explorando con límite de profundidad 55
+Explorando con límite de profundidad 57
+Estado objetivo encontrado con distancia 57, nodos expandidos 16505271, tiempo 20.604690 segundos.
