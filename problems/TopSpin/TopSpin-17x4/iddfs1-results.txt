@@ -1,0 +1,11 @@
+./topspin17x4.iddfs1 15
+Profundidad |   Numero de estados |     Factor de ramificacion
+1               18                      inf
+2               307                     17.055555
+3               5220                    17.003258
+4               88741                   17.000191
+5               1508598                 17.000011
+6               25646167                        17.000002
+7               435984840                       17.000000
+8               7411742281                      17.000000
+killed
