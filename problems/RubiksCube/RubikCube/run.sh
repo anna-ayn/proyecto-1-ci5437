@@ -8,8 +8,8 @@ make rubik3Sticker/edge_2.pdb
 
 echo "A* rubik3Sticker (max PDBs)"
 make rubik3Sticker.astar
-./rubik3Sticker.astar < initialstates.txt
+./rubik3Sticker.astar < initialstates2.txt
 
 echo "IDA* rubik3Sticker (max PDBs)"
 make rubik3Sticker.idastar
-./rubik3Sticker.idastar < initialstates.txt
+./rubik3Sticker.idastar < initialstates2.txt
