@@ -1,5 +1,6 @@
 make topspin17x4/group_1.pdb
 make topspin17x4/group_2.pdb
+make topspin17x4/group_3.pdb
 
 echo "A* topspin17x4 (max PDBs)"
 make topspin17x4.astar
