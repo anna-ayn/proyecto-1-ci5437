@@ -1,0 +1,95 @@
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
+psvn2c command line options in effect:
+Backwards rules will be generated.
+Move pruning for forward search will use a history length of 1.
+No move pruning code will be generated for backwards search.
+The initial size of each rule group will be 100.
+Duplicate rules will be kept.
+Code supporting abstraction will be generated.
+Code for the state_map data structure will be generated.
+Verbosity is set to 0.
+../../../global/distSummary.cpp:38:20: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   38 |             printf("%"PRId64" states at distance %d\n", numAtD, d);
+      |                    ^
+../../../global/distSummary.cpp:75:16: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   75 |         printf("%"PRId64" states at distance %d\n", numAtD, d);
+      |                ^
+../../../global/distSummary.cpp:77:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   77 |     printf("%"PRIu64" states in total.\n", totalNodes);
+      |            ^
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
+17 states at distance 0
+136 states at distance 1
+918 states at distance 2
+5814 states at distance 3
+30464 states at distance 4
+120309 states at distance 5
+283968 states at distance 6
+266373 states at distance 7
+34561 states at distance 8
+742560 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
+psvn2c command line options in effect:
+Backwards rules will be generated.
+Move pruning for forward search will use a history length of 1.
+No move pruning code will be generated for backwards search.
+The initial size of each rule group will be 100.
+Duplicate rules will be kept.
+Code supporting abstraction will be generated.
+Code for the state_map data structure will be generated.
+Verbosity is set to 0.
+../../../global/distSummary.cpp:38:20: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   38 |             printf("%"PRId64" states at distance %d\n", numAtD, d);
+      |                    ^
+../../../global/distSummary.cpp:75:16: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   75 |         printf("%"PRId64" states at distance %d\n", numAtD, d);
+      |                ^
+../../../global/distSummary.cpp:77:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   77 |     printf("%"PRIu64" states in total.\n", totalNodes);
+      |            ^
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
+17 states at distance 0
+136 states at distance 1
+918 states at distance 2
+5814 states at distance 3
+30464 states at distance 4
+120309 states at distance 5
+283968 states at distance 6
+266373 states at distance 7
+34561 states at distance 8
+742560 states in total.
+A* topspin17x4 (max PDBs)
+psvn2c command line options in effect:
+Backwards rules will be generated.
+Move pruning for forward search will use a history length of 1.
+No move pruning code will be generated for backwards search.
+The initial size of each rule group will be 100.
+Duplicate rules will be kept.
+Code supporting abstraction will be generated.
+Code for the state_map data structure will be generated.
+Verbosity is set to 0.
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include topspin17x4.c -include heuristic.cpp -o topspin17x4.astar
+topspin17x4.astar: ./heuristic.cpp:24: void open_pdbs(): Assertion `filepdb != NULL' failed.
+./run.sh: line 6: 17019 Aborted                 (core dumped) ./topspin17x4.astar < initialstates.txt
+IDA* topspin17x4 (max PDBs)
+psvn2c command line options in effect:
+Backwards rules will be generated.
+Move pruning for forward search will use a history length of 1.
+No move pruning code will be generated for backwards search.
+The initial size of each rule group will be 100.
+Duplicate rules will be kept.
+Code supporting abstraction will be generated.
+Code for the state_map data structure will be generated.
+Verbosity is set to 0.
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include topspin17x4.c -include heuristic.cpp -o topspin17x4.idastar
+In file included from <command-line>:
+./topspin17x4.c: In function ‘int heuristic(state_t*)’:
+./topspin17x4.c:1789:20: warning: array subscript ‘const uint32_t {aka const unsigned int}[4]’ is partly outside array bounds of ‘unsigned char [17]’ [-Warray-bounds]
+ 1789 |     case 5 : b+=k[1]&0xff; a+=k[0]; break;
+      |                 ~~~^
+In file included from <command-line>:
+./heuristic.cpp:42:35: note: referencing an object of size 17 allocated by ‘void* operator new(std::size_t)’
+   42 |         state_t *temp_state = new state_t;
+      |                                   ^~~~~~~
+topspin17x4.idastar: ./heuristic.cpp:24: void open_pdbs(): Assertion `filepdb != NULL' failed.
+./run.sh: line 10: 17040 Aborted                 (core dumped) ./topspin17x4.idastar < initialstates.txt
