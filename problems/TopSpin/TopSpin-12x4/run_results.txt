@@ -1,73 +1,4 @@
-make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-12x4'
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
-../../../global/distSummary.cpp:38:20: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   38 |             printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                    ^
-../../../global/distSummary.cpp:75:16: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   75 |         printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                ^
-../../../global/distSummary.cpp:77:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   77 |     printf("%"PRIu64" states in total.\n", totalNodes);
-      |            ^
-make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-12x4'
-12 states at distance 0
-108 states at distance 1
-804 states at distance 2
-5232 states at distance 3
-30492 states at distance 4
-134628 states at distance 5
-309696 states at distance 6
-178956 states at distance 7
-5352 states at distance 8
-665280 states in total.
-make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-12x4'
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
-../../../global/distSummary.cpp:38:20: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   38 |             printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                    ^
-../../../global/distSummary.cpp:75:16: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   75 |         printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                ^
-../../../global/distSummary.cpp:77:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   77 |     printf("%"PRIu64" states in total.\n", totalNodes);
-      |            ^
-make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-12x4'
-12 states at distance 0
-96 states at distance 1
-648 states at distance 2
-3648 states at distance 3
-15852 states at distance 4
-41088 states at distance 5
-31968 states at distance 6
-1728 states at distance 7
-95040 states in total.
 A* topspin12x4 (max PDBs)
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
-g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include topspin12x4.c -include heuristic.cpp -o topspin12x4.astar
 Estado inicial: 3 5 10 8 2 4 0 7 1 6 11 9
 
 Estado objetivo encontrado con distancia 9, nodos expandidos 494, tiempo 0.000626 segundos.
@@ -102,6 +33,7 @@ Estado inicial: 1 10 0 5 7 9 11 2 6 4 3 8
 
 Estado objetivo encontrado con distancia 8, nodos expandidos 385, tiempo 0.000408 segundos.
 Estado inicial: 8 4 9 10 0 1 11 6 7 5 3 2
+
 
 Estado objetivo encontrado con distancia 8, nodos expandidos 1052, tiempo 0.000978 segundos.
 Estado inicial: 11 4 7 6 5 1 0 2 3 10 9 8
@@ -158,17 +90,9 @@ Estado objetivo encontrado con distancia 8, nodos expandidos 284, tiempo 0.00035
 Estado inicial: 2 11 6 1 5 8 9 0 4 10 3 7
 
 Estado objetivo encontrado con distancia 11, nodos expandidos 65760, tiempo 0.073319 segundos.
+
+
 IDA* topspin12x4 (max PDBs)
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
-g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include topspin12x4.c -include heuristic.cpp -o topspin12x4.idastar
 Estado inicial: 3 5 10 8 2 4 0 7 1 6 11 9
 
 Explorando con límite de profundidad 6
