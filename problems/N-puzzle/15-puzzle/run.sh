@@ -4,11 +4,11 @@ make 15-puzzle/test3.pdb
 
 echo "A* 15-puzzle (Manhattan)"
 make 15-puzzle.astarM
-./15-puzzle.astar < initialstates.txt
+./15-puzzle.astarM < initialstates.txt
 
 echo "IDA* 15-puzzle (Manhattan)"
 make 15-puzzle.idastarM
-./15-puzzle.astar < initialstates.txt
+./15-puzzle.idastarM < initialstates.txt
 
 echo "A* 15-puzzle (PDBs aditivos)"
 make 15-puzzle.astar
