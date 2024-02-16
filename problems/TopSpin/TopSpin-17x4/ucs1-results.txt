@@ -1,0 +1,9 @@
+./topspin17x4.ucs1 15
+Profundidad |   Numero de estados |     Factor de ramificacion
+0               17              inf
+1               289             17.000000
+2               4913            17.000000
+3               83521           17.000000
+4               1419857         17.000000
+5               24137569                17.000000
+Killed

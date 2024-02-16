@@ -1,0 +1,9 @@
+./rubik3Sticker.ucs1 15
+Profundidad |   Numero de estados |     Factor de ramificacion
+0               1               inf
+1               18              18.000000
+2               324             18.000000
+3               5832            18.000000
+4               104976          18.000000
+5               1889568         18.000000
+Killed
