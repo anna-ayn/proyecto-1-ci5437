@@ -1,0 +1,134 @@
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/Torres_Hanoi/Torre_Hanoi_14x4'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/Torres_Hanoi/Torre_Hanoi_14x4'
+1 states at distance 0
+3 states at distance 1
+6 states at distance 2
+12 states at distance 3
+30 states at distance 4
+30 states at distance 5
+66 states at distance 6
+96 states at distance 7
+126 states at distance 8
+210 states at distance 9
+330 states at distance 10
+318 states at distance 11
+462 states at distance 12
+804 states at distance 13
+918 states at distance 14
+528 states at distance 15
+150 states at distance 16
+6 states at distance 17
+4096 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/Torres_Hanoi/Torre_Hanoi_14x4'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/Torres_Hanoi/Torre_Hanoi_14x4'
+1 states at distance 0
+3 states at distance 1
+6 states at distance 2
+12 states at distance 3
+30 states at distance 4
+30 states at distance 5
+66 states at distance 6
+96 states at distance 7
+126 states at distance 8
+210 states at distance 9
+330 states at distance 10
+318 states at distance 11
+462 states at distance 12
+816 states at distance 13
+1032 states at distance 14
+936 states at distance 15
+1044 states at distance 16
+1752 states at distance 17
+2610 states at distance 18
+3036 states at distance 19
+3528 states at distance 20
+3294 states at distance 21
+4500 states at distance 22
+6066 states at distance 23
+8454 states at distance 24
+9060 states at distance 25
+8118 states at distance 26
+5610 states at distance 27
+2760 states at distance 28
+894 states at distance 29
+234 states at distance 30
+78 states at distance 31
+18 states at distance 32
+6 states at distance 33
+65536 states in total.
+A* hanoi_14x4 (max PDBs)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include hanoi_14x4.c -include heuristic.cpp -o hanoi_14x4.astar
+Estado inicial: 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 23, nodos expandidos 24, tiempo 0.000072 segundos.
+Estado inicial: 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 17, nodos expandidos 18, tiempo 0.000046 segundos.
+Estado inicial: 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 22, nodos expandidos 23, tiempo 0.000057 segundos.
+Estado inicial: 0 1 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 23, nodos expandidos 24, tiempo 0.000052 segundos.
+Estado inicial: 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 13, nodos expandidos 14, tiempo 0.000037 segundos.
+Estado inicial: 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 14, nodos expandidos 15, tiempo 0.000038 segundos.
+Estado inicial: 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 29, nodos expandidos 422914, tiempo 0.168795 segundos.
+Estado inicial: 0 1 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 23, nodos expandidos 24, tiempo 0.000057 segundos.
+Estado inicial: 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 20, nodos expandidos 21, tiempo 0.000047 segundos.
+Estado inicial: 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 40, nodos expandidos 31759593, tiempo 12.559945 segundos.
+Estado inicial: 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 26, nodos expandidos 27, tiempo 0.000051 segundos.
+Estado inicial: 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 25, nodos expandidos 26, tiempo 0.000049 segundos.
+Estado inicial: 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 15, nodos expandidos 16, tiempo 0.000030 segundos.
+Estado inicial: 0 0 1 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 26, nodos expandidos 27, tiempo 0.000047 segundos.
+Estado inicial: 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Estado objetivo encontrado con distancia 13, nodos expandidos 14, tiempo 0.000024 segundos.
+IDA* hanoi_14x4 (max PDBs)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include hanoi_14x4.c -include heuristic.cpp -o hanoi_14x4.idastar
+Estado inicial: 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Explorando con límite de profundidad 23
+Estado objetivo encontrado con distancia 23, nodos expandidos 23, tiempo 0.000031 segundos.
+Estado inicial: 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Explorando con límite de profundidad 17
+Estado objetivo encontrado con distancia 17, nodos expandidos 17, tiempo 0.000014 segundos.
+Estado inicial: 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Explorando con límite de profundidad 22
+Estado objetivo encontrado con distancia 22, nodos expandidos 22, tiempo 0.000017 segundos.
+Estado inicial: 0 1 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Explorando con límite de profundidad 23
+Estado objetivo encontrado con distancia 23, nodos expandidos 23, tiempo 0.000017 segundos.
+Estado inicial: 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Explorando con límite de profundidad 13
+Estado objetivo encontrado con distancia 13, nodos expandidos 13, tiempo 0.000008 segundos.
+Estado inicial: 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 14, tiempo 0.000010 segundos.
+Estado inicial: 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+
+Limite de tiempo excedido
