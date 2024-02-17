@@ -1,0 +1,127 @@
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+12 states at distance 1
+110 states at distance 2
+670 states at distance 3
+2341 states at distance 4
+3719 states at distance 5
+1047 states at distance 6
+20 states at distance 7
+7920 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+12 states at distance 1
+110 states at distance 2
+670 states at distance 3
+2341 states at distance 4
+3719 states at distance 5
+1047 states at distance 6
+20 states at distance 7
+7920 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+12 states at distance 1
+110 states at distance 2
+670 states at distance 3
+2341 states at distance 4
+3719 states at distance 5
+1047 states at distance 6
+20 states at distance 7
+7920 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+12 states at distance 1
+110 states at distance 2
+670 states at distance 3
+2341 states at distance 4
+3719 states at distance 5
+1047 states at distance 6
+20 states at distance 7
+7920 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+12 states at distance 1
+110 states at distance 2
+670 states at distance 3
+2341 states at distance 4
+3719 states at distance 5
+1047 states at distance 6
+20 states at distance 7
+7920 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+18 states at distance 1
+243 states at distance 2
+2874 states at distance 3
+27816 states at distance 4
+199118 states at distance 5
+955954 states at distance 6
+1954804 states at distance 7
+532372 states at distance 8
+960 states at distance 9
+3674160 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/RubiksCube/RubikCube'
+1 states at distance 0
+18 states at distance 1
+243 states at distance 2
+2874 states at distance 3
+27816 states at distance 4
+199118 states at distance 5
+955954 states at distance 6
+1954804 states at distance 7
+532372 states at distance 8
+960 states at distance 9
+3674160 states in total.
+IDA* rubik3Sticker (max PDBs)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include rubik3Sticker.c -include heuristic.cpp -o rubik3Sticker.idastar
+Estado inicial: BLUE RED RED GREEN WHITE RED BLUE BLUE GREEN ORANGE GREEN GREEN WHITE ORANGE ORANGE BLUE YELLOW ORANGE WHITE WHITE ORANGE BLUE RED WHITE YELLOW YELLOW ORANGE YELLOW GREEN YELLOW BLUE GREEN RED GREEN YELLOW RED ORANGE WHITE RED RED YELLOW WHITE GREEN ORANGE BLUE BLUE WHITE YELLOW
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Tiempo de ejecución excedido
+Estado inicial: RED RED GREEN ORANGE BLUE WHITE YELLOW GREEN RED GREEN WHITE WHITE ORANGE YELLOW ORANGE BLUE WHITE BLUE YELLOW ORANGE YELLOW GREEN BLUE RED GREEN ORANGE YELLOW GREEN ORANGE YELLOW BLUE YELLOW ORANGE YELLOW WHITE WHITE GREEN RED RED WHITE RED BLUE WHITE RED GREEN BLUE BLUE ORANGE
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Tiempo de ejecución excedido
+Estado inicial: GREEN GREEN ORANGE YELLOW RED ORANGE ORANGE ORANGE BLUE RED WHITE GREEN YELLOW YELLOW RED YELLOW GREEN ORANGE GREEN GREEN YELLOW RED GREEN BLUE BLUE YELLOW WHITE RED BLUE BLUE RED WHITE YELLOW RED ORANGE BLUE WHITE GREEN ORANGE WHITE RED BLUE BLUE WHITE WHITE ORANGE YELLOW WHITE
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Tiempo de ejecución excedido
+Estado inicial: RED GREEN RED YELLOW RED GREEN GREEN YELLOW YELLOW WHITE ORANGE RED WHITE WHITE ORANGE WHITE ORANGE WHITE RED ORANGE BLUE YELLOW GREEN ORANGE GREEN ORANGE WHITE RED BLUE RED BLUE BLUE BLUE ORANGE WHITE YELLOW ORANGE BLUE YELLOW RED GREEN BLUE WHITE GREEN YELLOW GREEN YELLOW BLUE
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Tiempo de ejecución excedido
+Estado inicial: WHITE BLUE ORANGE ORANGE WHITE WHITE BLUE GREEN YELLOW GREEN ORANGE ORANGE GREEN RED GREEN ORANGE YELLOW WHITE GREEN BLUE BLUE WHITE WHITE RED GREEN BLUE YELLOW BLUE YELLOW RED BLUE YELLOW RED GREEN ORANGE YELLOW ORANGE WHITE RED RED RED YELLOW WHITE YELLOW BLUE GREEN RED ORANGE
+

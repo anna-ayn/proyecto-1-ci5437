@@ -1,0 +1,8 @@
+Profundidad |	Numero de estados |	Factor de ramificacion
+0		14		inf
+1		196		14.000000
+2		2744		14.000000
+3		38416		14.000000
+4		537824		14.000000
+5		7529536		14.000000
+Killed
