@@ -35,7 +35,9 @@ head -n $(($lineaIDA-1)) $1 | grep "Estado inicial" | cut -d" " -f3-
 # Obtenemos el numero de estados iniciales
 estadosIniciales=$(head -n $(($lineaIDA-1)) $1 | grep "Estado inicial" | wc -l)
 # Obtenemos el numero de estados evaluados
-estadosEvaluados=$(head -n $(($lineaIDA-1)) $1 | grep "Estado objetivo encontrado" | wc -l)
+# Para obtener el numero de estados evaluados, buscamos las lineas que contienen "Estado objetivo encontrado" o "Tiempo de ejecución excedido"
+# Si la linea contiene "Estado objetivo encontrado" o "Tiempo de ejecución excedido", entonces la linea contiene un estado evaluado
+estadosEvaluados=$(head -n $(($lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado|Tiempo de ejecución excedido" | wc -l)
 # Comparamos los numeros, si son distintos, imprimimos "El ultimo estado mato el proceso". En caso contrario, no imprimimos nada
 if [ $estadosIniciales -ne $estadosEvaluados ]; then
     echo "El ultimo estado mato el proceso"
@@ -50,7 +52,9 @@ tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | cut -d" " -f3-
 # Obtenemos el numero de estados iniciales
 estadosIniciales=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | wc -l)
 # Obtenemos el numero de estados evaluados
-estadosEvaluados=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado objetivo encontrado" | wc -l)
+# Para obtener el numero de estados evaluados, buscamos las lineas que contienen "Estado objetivo encontrado" o "Tiempo de ejecución excedido"
+# Si la linea contiene "Estado objetivo encontrado" o "Tiempo de ejecución excedido", entonces la linea contiene un estado evaluado
+estadosEvaluados=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado|Tiempo de ejecución excedido" | wc -l)
 # Comparamos los numeros, si son distintos, imprimimos "El ultimo estado mato el proceso". En caso contrario, no imprimimos nada
 if [ $estadosIniciales -ne $estadosEvaluados ]; then
     echo "El ultimo estado mato el proceso"
