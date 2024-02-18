@@ -1,22 +1,4 @@
 make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
-../../../global/distSummary.cpp:38:20: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   38 |             printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                    ^
-../../../global/distSummary.cpp:75:16: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   75 |         printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                ^
-../../../global/distSummary.cpp:77:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   77 |     printf("%"PRIu64" states in total.\n", totalNodes);
-      |            ^
 make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
 17 states at distance 0
 136 states at distance 1
@@ -29,24 +11,6 @@ make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSp
 34561 states at distance 8
 742560 states in total.
 make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
-../../../global/distSummary.cpp:38:20: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   38 |             printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                    ^
-../../../global/distSummary.cpp:75:16: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   75 |         printf("%"PRId64" states at distance %d\n", numAtD, d);
-      |                ^
-../../../global/distSummary.cpp:77:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
-   77 |     printf("%"PRIu64" states in total.\n", totalNodes);
-      |            ^
 make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
 17 states at distance 0
 136 states at distance 1
@@ -58,38 +22,359 @@ make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSp
 266373 states at distance 7
 34561 states at distance 8
 742560 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/TopSpin/TopSpin-17x4'
+17 states at distance 0
+153 states at distance 1
+1139 states at distance 2
+7871 states at distance 3
+49385 states at distance 4
+267529 states at distance 5
+1143097 states at distance 6
+3090226 states at distance 7
+3575457 states at distance 8
+773772 states at distance 9
+2074 states at distance 10
+8910720 states in total.
 A* topspin17x4 (max PDBs)
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
 g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include topspin17x4.c -include heuristic.cpp -o topspin17x4.astar
-topspin17x4.astar: ./heuristic.cpp:24: void open_pdbs(): Assertion `filepdb != NULL' failed.
-./run.sh: line 6: 17019 Aborted                 (core dumped) ./topspin17x4.astar < initialstates.txt
+Estado inicial: 12 2 0 15 8 1 11 13 6 4 3 9 10 5 16 7 14
+
+Estado objetivo encontrado con distancia 14, nodos expandidos 41983879, tiempo 102.523527 segundos.
+Estado inicial: 2 14 7 1 8 12 6 5 13 15 9 0 16 11 10 3 4
+
 IDA* topspin17x4 (max PDBs)
-psvn2c command line options in effect:
-Backwards rules will be generated.
-Move pruning for forward search will use a history length of 1.
-No move pruning code will be generated for backwards search.
-The initial size of each rule group will be 100.
-Duplicate rules will be kept.
-Code supporting abstraction will be generated.
-Code for the state_map data structure will be generated.
-Verbosity is set to 0.
 g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include topspin17x4.c -include heuristic.cpp -o topspin17x4.idastar
-In file included from <command-line>:
-./topspin17x4.c: In function ‘int heuristic(state_t*)’:
-./topspin17x4.c:1789:20: warning: array subscript ‘const uint32_t {aka const unsigned int}[4]’ is partly outside array bounds of ‘unsigned char [17]’ [-Warray-bounds]
- 1789 |     case 5 : b+=k[1]&0xff; a+=k[0]; break;
-      |                 ~~~^
-In file included from <command-line>:
-./heuristic.cpp:42:35: note: referencing an object of size 17 allocated by ‘void* operator new(std::size_t)’
-   42 |         state_t *temp_state = new state_t;
-      |                                   ^~~~~~~
-topspin17x4.idastar: ./heuristic.cpp:24: void open_pdbs(): Assertion `filepdb != NULL' failed.
-./run.sh: line 10: 17040 Aborted                 (core dumped) ./topspin17x4.idastar < initialstates.txt
+Estado inicial: 12 2 0 15 8 1 11 13 6 4 3 9 10 5 16 7 14
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 6468820, tiempo 10.262764 segundos.
+Estado inicial: 2 14 7 1 8 12 6 5 13 15 9 0 16 11 10 3 4
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 63489534, tiempo 102.659269 segundos.
+Estado inicial: 11 13 7 5 14 2 1 15 4 9 6 8 10 12 16 0 3
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 3547754, tiempo 5.704886 segundos.
+Estado inicial: 1 13 9 12 16 4 15 5 3 0 2 8 14 10 6 11 7
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 97323167, tiempo 156.864693 segundos.
+Estado inicial: 15 4 0 12 7 5 13 1 3 2 16 8 9 6 14 10 11
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 31034098, tiempo 49.514387 segundos.
+Estado inicial: 15 1 13 11 9 10 12 3 4 16 2 7 8 0 5 6 14
+
+Explorando con límite de profundidad 6
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 8592775, tiempo 13.142425 segundos.
+Estado inicial: 16 12 2 11 4 14 3 13 8 6 10 7 5 0 15 9 1
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Explorando con límite de profundidad 16
+Estado objetivo encontrado con distancia 16, nodos expandidos 519064087, tiempo 836.502125 segundos.
+Estado inicial: 5 6 2 13 7 12 11 14 8 0 10 16 1 15 9 3 4
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Estado objetivo encontrado con distancia 13, nodos expandidos 766744, tiempo 1.270722 segundos.
+Estado inicial: 2 3 7 0 9 1 10 14 4 8 6 13 11 16 15 12 5
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 24249812, tiempo 38.824401 segundos.
+Estado inicial: 4 6 7 15 11 12 14 1 10 3 5 9 16 2 8 13 0
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 72200666, tiempo 118.082275 segundos.
+Estado inicial: 12 4 11 2 6 9 15 14 13 3 7 5 10 16 1 0 8
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 1924485, tiempo 3.178949 segundos.
+Estado inicial: 14 15 13 7 9 5 3 6 8 16 0 11 4 12 1 2 10
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 92224375, tiempo 142.647976 segundos.
+Estado inicial: 1 4 14 7 3 11 9 6 16 15 10 8 13 0 2 5 12
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Explorando con límite de profundidad 16
+Estado objetivo encontrado con distancia 16, nodos expandidos 270213809, tiempo 409.734564 segundos.
+Estado inicial: 3 0 6 4 11 5 13 14 15 8 16 2 7 12 1 10 9
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 30794599, tiempo 49.696772 segundos.
+Estado inicial: 0 3 5 6 12 7 15 14 11 1 10 4 2 16 13 8 9
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 92848807, tiempo 148.151044 segundos.
+Estado inicial: 3 8 14 15 6 4 12 7 5 1 11 9 16 0 13 2 10
+
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 24896853, tiempo 41.395100 segundos.
+Estado inicial: 16 14 10 15 2 1 5 0 7 4 12 13 6 3 8 9 11
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 89706504, tiempo 140.659942 segundos.
+Estado inicial: 13 4 16 10 12 8 14 15 2 6 9 11 7 5 0 1 3
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 28266045, tiempo 43.960204 segundos.
+Estado inicial: 14 15 6 3 4 11 0 9 5 16 13 2 10 12 7 1 8
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 40452528, tiempo 66.498705 segundos.
+Estado inicial: 16 10 4 9 14 6 13 3 5 15 8 0 7 2 1 12 11
+
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Explorando con límite de profundidad 16
+Tiempo de ejecución excedido
+Estado inicial: 10 15 9 13 0 16 2 6 14 11 7 1 3 4 8 12 5
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 66881378, tiempo 106.127476 segundos.
+Estado inicial: 9 6 10 8 4 16 1 5 7 12 0 14 2 15 3 13 11
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Explorando con límite de profundidad 16
+Estado objetivo encontrado con distancia 16, nodos expandidos 501224850, tiempo 793.935650 segundos.
+Estado inicial: 1 12 10 4 16 14 9 2 15 0 6 5 3 13 7 8 11
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Estado objetivo encontrado con distancia 13, nodos expandidos 1094093, tiempo 1.822938 segundos.
+Estado inicial: 10 9 12 13 2 15 0 14 1 8 5 6 3 4 7 11 16
+
+Explorando con límite de profundidad 6
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 16396435, tiempo 24.539793 segundos.
+Estado inicial: 11 4 0 13 10 6 2 3 1 9 14 12 16 15 5 7 8
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Estado objetivo encontrado con distancia 15, nodos expandidos 104139373, tiempo 156.296912 segundos.
+Estado inicial: 9 15 7 2 3 11 4 0 6 8 1 5 16 12 10 13 14
+
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Estado objetivo encontrado con distancia 13, nodos expandidos 388014, tiempo 0.610133 segundos.
+Estado inicial: 7 15 10 4 11 13 2 16 3 14 1 5 8 6 9 12 0
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Explorando con límite de profundidad 16
+Estado objetivo encontrado con distancia 16, nodos expandidos 172654412, tiempo 264.845528 segundos.
+Estado inicial: 1 9 0 5 11 16 10 3 13 12 6 15 2 8 4 14 7
+
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 7903111, tiempo 13.491700 segundos.
+Estado inicial: 12 5 15 0 7 2 4 9 8 1 6 3 11 16 13 14 10
+
+Explorando con límite de profundidad 7
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Explorando con límite de profundidad 15
+Explorando con límite de profundidad 16
+Estado objetivo encontrado con distancia 16, nodos expandidos 253436347, tiempo 387.632384 segundos.
+Estado inicial: 5 4 8 2 16 10 7 0 15 13 12 9 3 11 14 1 6
+
+Explorando con límite de profundidad 8
+Explorando con límite de profundidad 9
+Explorando con límite de profundidad 10
+Explorando con límite de profundidad 11
+Explorando con límite de profundidad 12
+Explorando con límite de profundidad 13
+Explorando con límite de profundidad 14
+Estado objetivo encontrado con distancia 14, nodos expandidos 4484474, tiempo 7.210879 segundos.
