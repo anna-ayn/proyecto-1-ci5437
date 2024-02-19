@@ -1,0 +1,4 @@
+A* topspin17x4 (max PDBs)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include topspin17x4.c -include heuristic.cpp -o topspin17x4.astar
+IDA* topspin17x4 (max PDBs)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include topspin17x4.c -include heuristic.cpp -o topspin17x4.idastar
