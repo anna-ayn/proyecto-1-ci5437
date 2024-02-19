@@ -43,9 +43,9 @@ echo "A*"
 head -n $(($lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getTimeResults.tmp
 # Iteramos sobre las lineas del archivo temporal
 while read linea; do
-    # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos el tiempo
+    # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos el tiempo y se cambia el "." por ","
     if echo $linea | grep -q "Estado objetivo encontrado con distancia"; then
-        echo $linea | cut -d" " -f11
+        echo $linea | cut -d" " -f11 | tr . ,
     # Si la linea contiene "Tiempo de ejecución excedido", entonces imprimimos el mensaje
     else
         echo "Tiempo de ejecución excedido"
@@ -69,9 +69,9 @@ echo "IDA*"
 tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getTimeResults.tmp
 # Iteramos sobre las lineas del archivo temporal
 while read linea; do
-    # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos el tiempo
+    # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos el tiempo y se cambia el "." por ","
     if echo $linea | grep -q "Estado objetivo encontrado con distancia"; then
-        echo $linea | cut -d" " -f11
+        echo $linea | cut -d" " -f11 | tr . ,
     # Si la linea contiene "Tiempo de ejecución excedido", entonces imprimimos el mensaje
     else
         echo "Tiempo de ejecución excedido"
