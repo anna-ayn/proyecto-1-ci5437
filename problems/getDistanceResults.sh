@@ -73,7 +73,7 @@ echo "IDA*"
 # Expresion regular: "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido"
 # El sed elimina la parte de la linea que no es la distancia (flag -n para no imprimir las lineas por defecto, p para imprimir la linea actual)
 # El cut obtiene la distancia (flag -d para especificar el delimitador y -f para especificar el campo)
-tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getDistanceResults.tmp
+tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getDistanceResults.tmp
 # Iteramos sobre las lineas del archivo temporal
 while read linea; do
     # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos la distancia
@@ -89,9 +89,9 @@ done < getDistanceResults.tmp
 # Si el numero de estados iniciales es igual al numero de estados evaluados, entonces la prueba fue exitosa
 # Si no, entonces la prueba no fue exitosa
 # Obtenemos el numero de estados iniciales
-estadosIniciales=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | wc -l)
+estadosIniciales=$(tail -n $(($lineas-$lineaIDA)) $1 | grep "Estado inicial" | wc -l)
 # Obtenemos el numero de estados evaluados
-estadosEvaluados=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" | wc -l)
+estadosEvaluados=$(tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" | wc -l)
 # Comparamos los numeros, si son distintos, imprimimos "Estado no exitoso". En caso contrario, no imprimimos nada
 if [ $estadosIniciales -ne $estadosEvaluados ]; then
     echo "Estado no exitoso"

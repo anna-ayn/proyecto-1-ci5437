@@ -66,7 +66,7 @@ fi
 
 # Obtenemos los nodos de IDA* y las mostramos en consola
 echo "IDA*"
-tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getNodeResults.tmp
+tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getNodeResults.tmp
 # Iteramos sobre las lineas del archivo temporal
 while read linea; do
     # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos los nodos
@@ -82,9 +82,9 @@ done < getNodeResults.tmp
 # Si el numero de estados iniciales es igual al numero de estados evaluados, entonces la prueba fue exitosa
 # Si no, entonces la prueba no fue exitosa
 # Obtenemos el numero de estados iniciales
-estadosIniciales=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | wc -l)
+estadosIniciales=$(tail -n $(($lineas-$lineaIDA)) $1 | grep "Estado inicial" | wc -l)
 # Obtenemos el numero de estados evaluados
-estadosEvaluados=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" | wc -l)
+estadosEvaluados=$(tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" | wc -l)
 # Comparamos los numeros, si son distintos, imprimimos "Estado no exitoso". En caso contrario, no imprimimos nada
 if [ $estadosIniciales -ne $estadosEvaluados ]; then
     echo "Estado no exitoso"

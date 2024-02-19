@@ -66,7 +66,7 @@ fi
 
 # Obtenemos los tiempos de IDA* y las mostramos en consola
 echo "IDA*"
-tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getTimeResults.tmp
+tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" > getTimeResults.tmp
 # Iteramos sobre las lineas del archivo temporal
 while read linea; do
     # Si la linea contiene "Estado objetivo encontrado con distancia", entonces obtenemos el tiempo
@@ -82,9 +82,9 @@ done < getTimeResults.tmp
 # Si el numero de estados iniciales es igual al numero de estados evaluados, entonces la prueba fue exitosa
 # Si no, entonces la prueba no fue exitosa
 # Obtenemos el numero de estados iniciales
-estadosIniciales=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | wc -l)
+estadosIniciales=$(tail -n $(($lineas-$lineaIDA)) $1 | grep "Estado inicial" | wc -l)
 # Obtenemos el numero de estados evaluados
-estadosEvaluados=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" | wc -l)
+estadosEvaluados=$(tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado con distancia|Tiempo de ejecución excedido" | wc -l)
 # Comparamos los numeros, si son distintos, imprimimos "El ultimo estado mato el proceso". En caso contrario, no imprimimos nada
 if [ $estadosIniciales -ne $estadosEvaluados ]; then
     echo "El ultimo estado mato el proceso"

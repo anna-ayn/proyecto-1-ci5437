@@ -1,0 +1,305 @@
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+1 states at distance 0
+7 states at distance 1
+35 states at distance 2
+128 states at distance 3
+438 states at distance 4
+1180 states at distance 5
+2898 states at distance 6
+5927 states at distance 7
+11044 states at distance 8
+17591 states at distance 9
+25539 states at distance 10
+32462 states at distance 11
+37774 states at distance 12
+38928 states at distance 13
+36874 states at distance 14
+31184 states at distance 15
+24302 states at distance 16
+16764 states at distance 17
+10566 states at distance 18
+5730 states at distance 19
+2787 states at distance 20
+1051 states at distance 21
+328 states at distance 22
+56 states at distance 23
+6 states at distance 24
+303600 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+1 states at distance 0
+6 states at distance 1
+37 states at distance 2
+144 states at distance 3
+494 states at distance 4
+1379 states at distance 5
+3542 states at distance 6
+7540 states at distance 7
+14295 states at distance 8
+22723 states at distance 9
+32134 states at distance 10
+39037 states at distance 11
+42641 states at distance 12
+40666 states at distance 13
+35089 states at distance 14
+26468 states at distance 15
+18033 states at distance 16
+10567 states at distance 17
+5503 states at distance 18
+2298 states at distance 19
+794 states at distance 20
+180 states at distance 21
+29 states at distance 22
+303600 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+1 states at distance 0
+6 states at distance 1
+31 states at distance 2
+112 states at distance 3
+374 states at distance 4
+986 states at distance 5
+2364 states at distance 6
+4801 states at distance 7
+9003 states at distance 8
+14673 states at distance 9
+22123 states at distance 10
+29274 states at distance 11
+35492 states at distance 12
+38129 states at distance 13
+37705 states at distance 14
+33327 states at distance 15
+27271 states at distance 16
+19900 states at distance 17
+13367 states at distance 18
+7849 states at distance 19
+4171 states at distance 20
+1791 states at distance 21
+662 states at distance 22
+160 states at distance 23
+28 states at distance 24
+303600 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+1 states at distance 0
+8 states at distance 1
+56 states at distance 2
+256 states at distance 3
+976 states at distance 4
+2944 states at distance 5
+7607 states at distance 6
+15806 states at distance 7
+27864 states at distance 8
+39906 states at distance 9
+48837 states at distance 10
+49310 states at distance 11
+42875 states at distance 12
+30978 states at distance 13
+19362 states at distance 14
+10024 states at distance 15
+4465 states at distance 16
+1624 states at distance 17
+512 states at distance 18
+144 states at distance 19
+36 states at distance 20
+8 states at distance 21
+1 states at distance 22
+303600 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+1 states at distance 0
+5 states at distance 1
+22 states at distance 2
+72 states at distance 3
+239 states at distance 4
+631 states at distance 5
+1567 states at distance 6
+3309 states at distance 7
+6508 states at distance 8
+11031 states at distance 9
+17272 states at distance 10
+23763 states at distance 11
+30210 states at distance 12
+34327 states at distance 13
+36314 states at distance 14
+34710 states at distance 15
+30993 states at distance 16
+25056 states at distance 17
+18954 states at distance 18
+12820 states at distance 19
+8035 states at distance 20
+4387 states at distance 21
+2187 states at distance 22
+845 states at distance 23
+284 states at distance 24
+52 states at distance 25
+6 states at distance 26
+303600 states in total.
+make[1]: Entering directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+make[1]: Leaving directory '/home/preparador/ia1-JC/proy1/problems/N-puzzle/24-puzzle'
+1 states at distance 0
+4 states at distance 1
+22 states at distance 2
+72 states at distance 3
+228 states at distance 4
+614 states at distance 5
+1626 states at distance 6
+3596 states at distance 7
+7316 states at distance 8
+12566 states at distance 9
+19564 states at distance 10
+26532 states at distance 11
+32996 states at distance 12
+36452 states at distance 13
+37270 states at distance 14
+34338 states at distance 15
+29500 states at distance 16
+22856 states at distance 17
+16469 states at distance 18
+10516 states at distance 19
+6153 states at distance 20
+3042 states at distance 21
+1351 states at distance 22
+420 states at distance 23
+96 states at distance 24
+303600 states in total.
+A* 24-puzzle (PDBs aditivos)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/astar.cpp -include 24-puzzle.c -include heuristic.cpp -o 24-puzzle.astar
+Estado inicial: 15 11 8 18 14 3 19 16 20 5 24 2 17 4 22 10 1 13 9 21 23 7 6 12 b
+
+IDA* 24-puzzle (PDBs aditivos)
+g++ -Wall -O3 -Wno-unused-function -Wno-unused-variable ../../../global/idastar.cpp -include 24-puzzle.c -include heuristic.cpp -o 24-puzzle.idastar
+Estado inicial: 15 11 8 18 14 3 19 16 20 5 24 2 17 4 22 10 1 13 9 21 23 7 6 12 b
+
+Explorando con límite de profundidad 78
+Explorando con límite de profundidad 80
+Explorando con límite de profundidad 82
+Explorando con límite de profundidad 84
+Explorando con límite de profundidad 86
+Explorando con límite de profundidad 88
+Explorando con límite de profundidad 90
+Explorando con límite de profundidad 92
+Explorando con límite de profundidad 94
+Tiempo de ejecución excedido
+Estado inicial: 12 23 9 18 24 22 4 b 16 13 20 3 15 6 17 8 7 11 19 1 10 2 14 5 21
+
+Explorando con límite de profundidad 87
+Explorando con límite de profundidad 89
+Explorando con límite de profundidad 91
+Explorando con límite de profundidad 93
+Explorando con límite de profundidad 95
+Explorando con límite de profundidad 97
+Explorando con límite de profundidad 99
+Tiempo de ejecución excedido
+Estado inicial: 21 24 8 1 19 22 12 9 7 18 4 b 23 14 10 6 3 11 16 5 15 2 20 13 17
+
+Explorando con límite de profundidad 77
+Explorando con límite de profundidad 79
+Explorando con límite de profundidad 81
+Explorando con límite de profundidad 83
+Explorando con límite de profundidad 85
+Explorando con límite de profundidad 87
+Explorando con límite de profundidad 89
+Explorando con límite de profundidad 91
+Explorando con límite de profundidad 93
+Tiempo de ejecución excedido
+Estado inicial: 24 1 17 10 15 14 3 13 8 b 22 16 20 7 21 4 12 9 2 11 5 23 6 18 19
+
+Explorando con límite de profundidad 83
+Explorando con límite de profundidad 85
+Explorando con límite de profundidad 87
+Explorando con límite de profundidad 89
+Explorando con límite de profundidad 91
+Explorando con límite de profundidad 93
+Explorando con límite de profundidad 95
+Explorando con límite de profundidad 97
+Explorando con límite de profundidad 99
+Tiempo de ejecución excedido
+Estado inicial: 24 10 15 9 16 6 3 22 17 13 19 23 21 11 18 b 1 2 7 8 20 5 12 4 14
+
+Explorando con límite de profundidad 79
+Explorando con límite de profundidad 81
+Explorando con límite de profundidad 83
+Explorando con límite de profundidad 85
+Explorando con límite de profundidad 87
+Explorando con límite de profundidad 89
+Explorando con límite de profundidad 91
+Explorando con límite de profundidad 93
+Explorando con límite de profundidad 95
+Tiempo de ejecución excedido
+Estado inicial: 18 24 17 11 12 10 19 15 6 1 5 21 22 9 7 3 2 16 14 4 20 23 b 8 13
+
+Explorando con límite de profundidad 76
+Explorando con límite de profundidad 78
+Explorando con límite de profundidad 80
+Explorando con límite de profundidad 82
+Explorando con límite de profundidad 84
+Explorando con límite de profundidad 86
+Explorando con límite de profundidad 88
+Explorando con límite de profundidad 90
+Tiempo de ejecución excedido
+Estado inicial: 23 16 13 24 5 18 22 11 17 b 6 9 20 7 3 2 10 14 12 21 1 19 15 8 4
+
+Explorando con límite de profundidad 87
+Explorando con límite de profundidad 89
+Explorando con límite de profundidad 91
+Explorando con límite de profundidad 93
+Explorando con límite de profundidad 95
+Explorando con límite de profundidad 97
+Explorando con límite de profundidad 99
+Explorando con límite de profundidad 101
+Tiempo de ejecución excedido
+Estado inicial: b 12 24 10 13 5 2 4 19 21 23 18 8 17 9 22 16 11 6 15 7 3 14 1 20
+
+Explorando con límite de profundidad 82
+Explorando con límite de profundidad 84
+Explorando con límite de profundidad 86
+Explorando con límite de profundidad 88
+Explorando con límite de profundidad 90
+Explorando con límite de profundidad 92
+Explorando con límite de profundidad 94
+Explorando con límite de profundidad 96
+Explorando con límite de profundidad 98
+Explorando con límite de profundidad 100
+Tiempo de ejecución excedido
+Estado inicial: 16 13 6 23 9 8 3 5 24 15 22 12 21 17 1 19 10 7 11 4 18 2 14 20 b
+
+Explorando con límite de profundidad 80
+Explorando con límite de profundidad 82
+Explorando con límite de profundidad 84
+Explorando con límite de profundidad 86
+Explorando con límite de profundidad 88
+Explorando con límite de profundidad 90
+Explorando con límite de profundidad 92
+Explorando con límite de profundidad 94
+Explorando con límite de profundidad 96
+Explorando con límite de profundidad 98
+Tiempo de ejecución excedido
+Estado inicial: 4 5 1 23 21 13 2 10 18 17 15 7 b 9 3 14 11 12 19 8 6 20 24 22 16
+
+Explorando con límite de profundidad 66
+Explorando con límite de profundidad 68
+Explorando con límite de profundidad 70
+Explorando con límite de profundidad 72
+Explorando con límite de profundidad 74
+Explorando con límite de profundidad 76
+Explorando con límite de profundidad 78
+Explorando con límite de profundidad 80
+Explorando con límite de profundidad 82
+Tiempo de ejecución excedido
+Estado inicial: 24 8 14 5 16 4 13 6 22 19 1 10 9 12 3 b 18 21 20 23 15 17 11 7 2
+
+Explorando con límite de profundidad 77
+Explorando con límite de profundidad 79
+Explorando con límite de profundidad 81
+Explorando con límite de profundidad 83
+Explorando con límite de profundidad 85
+Explorando con límite de profundidad 87
+Explorando con límite de profundidad 89
+Explorando con límite de profundidad 91
+Explorando con límite de profundidad 93
+Explorando con límite de profundidad 95
+Tiempo de ejecución excedido
+Estado inicial: 7 6 3 22 15 19 21 2 13 b 8 10 9 4 18 16 11 24 5 12 17 1 23 14 20
+

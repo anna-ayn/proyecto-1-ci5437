@@ -45,16 +45,16 @@ fi
 
 # Obtenemos los estados evaluados de IDA* y las mostramos en consola
 echo "IDA*"
-tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | cut -d" " -f3-
+tail -n $(($lineas-$lineaIDA)) $1 | grep "Estado inicial" | cut -d" " -f3-
 # Revisamos si la ultima prueba de IDA* fue exitosa. Para eso comparamos el numero de estados iniciales con el numero de estados evaluados
 # Si el numero de estados iniciales es igual al numero de estados evaluados, entonces la prueba fue exitosa
 # Si no, entonces la prueba no fue exitosa
 # Obtenemos el numero de estados iniciales
-estadosIniciales=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep "Estado inicial" | wc -l)
+estadosIniciales=$(tail -n $(($lineas-$lineaIDA)) $1 | grep "Estado inicial" | wc -l)
 # Obtenemos el numero de estados evaluados
 # Para obtener el numero de estados evaluados, buscamos las lineas que contienen "Estado objetivo encontrado" o "Tiempo de ejecución excedido"
 # Si la linea contiene "Estado objetivo encontrado" o "Tiempo de ejecución excedido", entonces la linea contiene un estado evaluado
-estadosEvaluados=$(tail -n $(($lineas-$lineaIDA-1)) $1 | grep -E "Estado objetivo encontrado|Tiempo de ejecución excedido" | wc -l)
+estadosEvaluados=$(tail -n $(($lineas-$lineaIDA)) $1 | grep -E "Estado objetivo encontrado|Tiempo de ejecución excedido" | wc -l)
 # Comparamos los numeros, si son distintos, imprimimos "El ultimo estado mato el proceso". En caso contrario, no imprimimos nada
 if [ $estadosIniciales -ne $estadosEvaluados ]; then
     echo "El ultimo estado mato el proceso"
